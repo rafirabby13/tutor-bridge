@@ -14,7 +14,7 @@ const History = () => {
   }, []);
     return (
         <div>
-            <div>
+            <div className="grid grid-cols-5 gap-5">
                 {
                     history.map((history, i)=> <HistoryLeftCard
                     key={i}

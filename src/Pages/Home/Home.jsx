@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar.jsx";
 import Banner from "../../components/Banner.jsx";
@@ -7,17 +8,16 @@ import Feedback from "../../components/Feedback.jsx";
 import History from "../../components/History.jsx";
 
 const Home = () => {
-    return (
-        <div>
-            <Navbar/>
-            {/* <Banner/>
+  return (
+    <div>
+      {/* <Banner/>
             <Stats/>
             <Language/>
             <Feedback/> */}
-            <History/>
-            <Outlet/>
-        </div>
-    );
+      <History />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Home;
