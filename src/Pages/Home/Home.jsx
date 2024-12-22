@@ -4,15 +4,17 @@ import Banner from "../../components/Banner.jsx";
 import Stats from "../../components/Stats.jsx";
 import Language from "../../components/Language.jsx";
 import Feedback from "../../components/Feedback.jsx";
+import History from "../../components/History.jsx";
 
 const Home = () => {
     return (
         <div>
             <Navbar/>
-            <Banner/>
+            {/* <Banner/>
             <Stats/>
             <Language/>
-            <Feedback/>
+            <Feedback/> */}
+            <History/>
             <Outlet/>
         </div>
     );
