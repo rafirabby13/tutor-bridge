@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "img": "https://randomuser.me/api/portraits/men/35.jpg",
+      "name": "Ramesh Kumar",
+      "relation": "Parent of Priya Kumar (Delhi)",
+      "feedback2": "Online Tuition Hubs has been a game-changer for my daughter Priya. The personalized attention she receives from the educators has truly boosted her confidence in tackling complex subjects. The dedication of the team towards ensuring academic excellence is commendable. Thank you for helping Priya excel in her studies!",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "img": "https://randomuser.me/api/portraits/women/55.jpg",
+      "name": "Sophie Williams",
+      "relation": "High School Student (London)",
+      "feedback2": "I struggled with math for years until I found Online Tuition Hubs. My tutor was patient and explained every concept in a way that finally made sense. I went from barely passing to scoring top marks in my exams. This platform is amazing!",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "img": "https://randomuser.me/api/portraits/women/57.jpg",
+      "name": "Aisha Malik",
+      "relation": "Parent of Zaid Malik (Dubai)",
+      "feedback2": "The variety of tutors on this platform is fantastic! We found a language tutor for my son Zaid, and he’s now fluent in Spanish within a few months. I appreciate how easy it is to book and manage sessions. Highly recommended!",
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "img": "https://randomuser.me/api/portraits/men/47.jpg",
+      "name": "David Johnson",
+      "relation": "University Student (New York)",
+      "feedback2": "The flexibility and quality of tutors here have been incredible. I work part-time and needed someone who could adjust to my schedule. Thanks to this platform, I found the perfect tutor for advanced physics. My grades have never been better!",
+      "rating": 4.7
+    }
+  ]
+  
