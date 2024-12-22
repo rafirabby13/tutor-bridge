@@ -9,7 +9,7 @@ const Language = () => {
             .then(res=>res.json())
             .then(data=>{
                 // console.log(data);
-                setLanguage(data.slice(0,18))
+                setLanguage(data.slice(0,9))
             })
         },[])
     return (

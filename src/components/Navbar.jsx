@@ -4,10 +4,10 @@ const Navbar = () => {
   const items = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink to='/'>Home</NavLink>
       </li>
       <li>
-        <NavLink>Find Tutors</NavLink>
+        <NavLink to='/find-tutors'>Find Tutors</NavLink>
       </li>
       <li>
         <NavLink>Add Tutorials</NavLink>
