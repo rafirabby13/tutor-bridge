@@ -3,6 +3,8 @@ import Home from "../Pages/Home/Home.jsx";
 import MainLayout from "../Layout/MainLayout.jsx";
 import FindTutor from "../Pages/FindTutor/FindTutor.jsx";
 import TutorDetails from "../Pages/TutorDetail/TutorDetails.jsx";
+import Login from "../Pages/Login/Login.jsx";
+import Register from "../Pages/Register/Register.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +24,14 @@ export const router = createBrowserRouter([
           path: '/tutor/:details',
           element: <TutorDetails/>,
           loader: ({params})=> fetch(`http://localhost:5000/tutor/${params.details}`)
+        },
+        {
+          path: '/login',
+          element: <Login/>
+        },
+        {
+          path: '/register',
+          element: <Register/>
         }
       ]
     },
