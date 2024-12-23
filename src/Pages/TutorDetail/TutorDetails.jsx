@@ -13,7 +13,7 @@ const TutorDetails = () => {
         email,
         _id,
         rating,
-        reviews,
+        review,
         price,
         language,
         description,
@@ -23,7 +23,7 @@ const TutorDetails = () => {
 
 
       const handleTutorDetail=()=>{
-        const tutorInfo = {tutorId: _id, photo,language, price, tutorEmail: email, loggedInUserEmail: user.email}
+        const tutorInfo = {tutorId: _id, photo,language, price, tutorEmail: email, loggedInUserEmail: user.email,review}
         console.log(tutorInfo);
         axios.post('http://localhost:5000/bookTutorials', tutorInfo)
         .then(res=>{
@@ -60,7 +60,7 @@ const TutorDetails = () => {
           <div className="flex items-center space-x-1">
             <span className="text-yellow-500 text-sm">⭐</span>
             <span className="text-gray-700 text-sm font-medium">
-              {rating} ({reviews} reviews)
+              {rating} ({review} reviews)
             </span>
           </div>
           <div className="text-lg font-semibold text-gray-900">${price}</div>
