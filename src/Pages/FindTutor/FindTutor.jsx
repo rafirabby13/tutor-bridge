@@ -20,13 +20,10 @@ const FindTutor = () => {
       <h1>FindTutor</h1>
 
       <div className="grid grid-cols-3 gap-6">
-           {
-              tutors.map((tutor, i)=> <FindTutorCard
-              key={i}
-              tutor={tutor}
-              ></FindTutorCard>)  
-            }
-           </div>
+        {tutors.map((tutor, i) => (
+          <FindTutorCard key={i} tutor={tutor}></FindTutorCard>
+        ))}
+      </div>
     </div>
   );
 };

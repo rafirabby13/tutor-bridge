@@ -1,11 +1,16 @@
 /* eslint-disable no-unused-vars */
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider.jsx";
+import axios from "axios";
 
 const TutorDetails = () => {
+  const {user} =  useContext(AuthContext)
     const tutor = useLoaderData()
+    // console.log(tutor);
     const {
         name,
-        country,
+        email,
         _id,
         rating,
         reviews,
@@ -13,12 +18,17 @@ const TutorDetails = () => {
         language,
         description,
         super_tutor,
-        img,
+        photo,
       } = tutor;
 
 
       const handleTutorDetail=()=>{
-        const tutorInfo = {tutorId: _id, img,language, price}
+        const tutorInfo = {tutorId: _id, photo,language, price, tutorEmail: email, loggedInUserEmail: user.email}
+        console.log(tutorInfo);
+        axios.post('http://localhost:5000/bookTutorials', tutorInfo)
+        .then(res=>{
+          console.log(res.data);
+        })
       }
 
     return (
@@ -26,7 +36,7 @@ const TutorDetails = () => {
       {/* Header Section */}
       <div className="flex items-center px-4 py-3">
         <img
-          src={img}
+          src={photo}
           alt={name}
           className="w-16 h-16 rounded-full object-cover"
         />
@@ -41,13 +51,7 @@ const TutorDetails = () => {
             {language}
           </p>
         </div>
-        <span className="ml-auto flex items-center">
-          <img
-            src={`https://flagcdn.com/w40/${country.toLowerCase()}.png`}
-            alt={country}
-            className="w-6 h-4 object-cover"
-          />
-        </span>
+        
       </div>
 
       {/* Content Section */}

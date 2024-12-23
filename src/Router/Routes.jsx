@@ -5,6 +5,8 @@ import FindTutor from "../Pages/FindTutor/FindTutor.jsx";
 import TutorDetails from "../Pages/TutorDetail/TutorDetails.jsx";
 import Login from "../Pages/Login/Login.jsx";
 import Register from "../Pages/Register/Register.jsx";
+import AddTutorials from "../Pages/AddTutorialss/AddTutorials.jsx";
+import PrivateRoute from "../PrivateRoutes/PrivateRoute.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +34,10 @@ export const router = createBrowserRouter([
         {
           path: '/register',
           element: <Register/>
+        },
+        {
+          path: '/addTutorials',
+          element: <PrivateRoute><AddTutorials/></PrivateRoute>
         }
       ]
     },
