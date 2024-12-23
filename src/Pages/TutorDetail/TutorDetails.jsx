@@ -15,7 +15,12 @@ const TutorDetails = () => {
         super_tutor,
         img,
       } = tutor;
-    console.log(tutor);
+
+
+      const handleTutorDetail=()=>{
+        const tutorInfo = {tutorId: _id, img,language, price}
+      }
+
     return (
         <div className="flex flex-col border border-gray-200 rounded-lg shadow-md w-full max-w-lg bg-white overflow-hidden">
       {/* Header Section */}
@@ -69,8 +74,8 @@ const TutorDetails = () => {
 
       {/* Footer Section */}
       <div className="px-4 py-3 flex justify-between items-center">
-        <button className="bg-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-pink-600 transition">
-          Book trial lesson
+        <button onClick={handleTutorDetail} className="bg-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-pink-600 transition">
+          Book Tutor
         </button>
         <button className="text-pink-500 font-medium hover:underline">
           Send message
