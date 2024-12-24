@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
-
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 const Navbar = () => {
   const { user, logoutUser } = useContext(AuthContext);
   // console.log(user);
@@ -15,31 +16,26 @@ const Navbar = () => {
         <NavLink to="/find-tutors">Find Tutors</NavLink>
       </li>
       <li>
-        <NavLink to='/addTutorials'>Add Tutorials</NavLink>
+        <NavLink to="/addTutorials">Add Tutorials</NavLink>
       </li>
       <li>
-        <NavLink to='/myTutorials'>My Tutorials</NavLink>
+        <NavLink to="/myTutorials">My Tutorials</NavLink>
       </li>
       <li>
-        <NavLink to='/myBookedTutor'>My booked Tutors</NavLink>
+        <NavLink to="/myBookedTutor">My booked Tutors</NavLink>
       </li>
     </>
   );
 
-
-
-  const handleLogout=()=>{
+  const handleLogout = () => {
     logoutUser()
-    .then(()=>{
-      alert('success');
-    })
-    .catch(err=>{
-      console.log(err.message);
-    })
-
-
-  }
-
+      .then(() => {
+        alert("success");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   return (
     <div>
@@ -76,11 +72,29 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <Link onClick={handleLogout} className="btn">Logout</Link>
+            <div className="flex items-center gap-4">
+              <img
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user?.displayName}
+                data-tooltip-variant="warning"
+                className="h-16 w-16 rounded-full p-1 border-[6px]"
+                src={user?.photoURL}
+                alt=""
+              />
+              <Tooltip id="my-tooltip" />
+
+              <Link onClick={handleLogout} className="btn">
+                Logout
+              </Link>
+            </div>
           ) : (
             <div>
-              <Link to='/login' className="btn">Login</Link>
-              <Link to='/register' className="btn">Register</Link>
+              <Link to="/login" className="btn">
+                Login
+              </Link>
+              <Link to="/register" className="btn">
+                Register
+              </Link>
             </div>
           )}
         </div>

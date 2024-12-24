@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import { useLoaderData } from "react-router-dom";
-import axios from "axios";
 
 const UpdateTutorial = () => {
 
@@ -57,7 +56,7 @@ const UpdateTutorial = () => {
         className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
       >
         <h2 className="text-2xl font-bold text-gray-800 text-center">
-          Create Tutor Profile
+          Update Tutor Profile
         </h2>
 
         {/* Name */}
@@ -193,7 +192,7 @@ const UpdateTutorial = () => {
         {/* Submit Button */}
         <div>
           <button className="w-full bg-pink-500 text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
-            Submit Profile
+           Update
           </button>
         </div>
       </form>
