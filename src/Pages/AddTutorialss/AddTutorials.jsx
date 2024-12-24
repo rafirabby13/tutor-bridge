@@ -157,7 +157,7 @@ value={user?.email}            className="mt-1 w-full p-2 border border-gray-300
             Review
           </label>
           <input
-            type="text"
+            type="number"
             id="review"
             name="review"
             defaultValue={0}

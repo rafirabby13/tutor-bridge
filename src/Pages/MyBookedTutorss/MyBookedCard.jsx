@@ -16,15 +16,12 @@ const MyBookedCard = ({ booked }) => {
     tutorId,
     _id,
   } = booked;
-  const [reviewCount, setReviewCount] = useState(parseInt(review) + 1);
+//   const [reviewCount, setReviewCount] = useState(parseInt(review) + 1);
   const handleReviewIncreament = () => {
-    console.log("object", parseInt(review));
-    setReviewCount(reviewCount + 1);
-    console.log(reviewCount);
+    console.log("object", review);
+ 
     axios
-      .patch(`http://localhost:5000/tutor/${_id}`, {
-        review: reviewCount,
-      })
+      .patch(`http://localhost:5000/tutor/${_id}`)
       .then((res) => {
         console.log(res.data);
       });
@@ -54,7 +51,7 @@ const MyBookedCard = ({ booked }) => {
             <span className="text-gray-800 font-medium">{language}</span>
           </p>
           <p className="text-xl font-bold text-gray-600 mt-2">
-            Review : <span className="text-gray-800 font-medium">{reviewCount}</span>
+            Review : <span className="text-gray-800 font-medium">{review}</span>
           </p>
 
           {/* Price */}

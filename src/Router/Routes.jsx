@@ -8,6 +8,7 @@ import Register from "../Pages/Register/Register.jsx";
 import AddTutorials from "../Pages/AddTutorialss/AddTutorials.jsx";
 import PrivateRoute from "../PrivateRoutes/PrivateRoute.jsx";
 import MyBookedTutors from "../Pages/MyBookedTutorss/MyBookedTutors.jsx";
+import MyTutorils from "../Pages/MyTutorials/MyTutorils.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
           path: '/myBookedTutor',
           element: <PrivateRoute><MyBookedTutors/></PrivateRoute>,
           loader: ()=>fetch('http://localhost:5000/bookedTutorials')
+        },
+        {
+          path: '/myTutorials',
+          element: <PrivateRoute><MyTutorils/></PrivateRoute>
         }
       ]
     },
