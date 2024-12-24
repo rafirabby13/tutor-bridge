@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import FindTutorCard from "./FindTutorCard.jsx";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider.jsx";
 
 const FindTutor = () => {
-  const [tutors, setTutors] = useState([]);
+  // const [tutors, setTutors] = useState([]);
+
+  const {tutors, setTutors} = useContext(AuthContext)
 
   useEffect(() => {
     fetch("http://localhost:5000/findTutor")
