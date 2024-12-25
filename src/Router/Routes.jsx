@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
         {
           path: '/tutor/:details',
           element: <PrivateRoute><TutorDetails/></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/tutor/${params.details}`)
+          // loader: ({params})=> fetch(`http://localhost:5000/tutor/${params.details}`)
         },
         {
           path: '/login',

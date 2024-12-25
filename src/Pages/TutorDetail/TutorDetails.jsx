@@ -1,22 +1,25 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import axios from "axios";
 import useAxios from "../../hooks/useAxios.jsx";
 
 const TutorDetails = () => {
   const { user } = useContext(AuthContext);
-  const tutor = useLoaderData();
-  console.log(tutor);
-  // const [tutor, setTutor]= useState([])
-  // const axiosSecure=  useAxios()
-
-  // useEffect(()=>{
-  //   axiosSecure.get(`http://localhost:5000/tutor?id`, {
-  //     withCredentials: true
-  //   })
-  // },[])
+  // const tutor = useLoaderData();
+  // console.log(tutor);
+  const [tutor, setTutor]= useState([])
+  const axiosSecure=  useAxios()
+ 
+  const {details} = useParams()
+  // console.log(details);
+  useEffect(()=>{
+    axiosSecure.get(`/tutor/${details}`)
+    .then(res=>{
+      setTutor(res.data)
+    })
+  },[details,axiosSecure])
   const {
     name,
     email,
@@ -39,7 +42,7 @@ const TutorDetails = () => {
       review,
     };
     console.log(tutorInfo);
-    axios.post("http://localhost:5000/bookTutorials", tutorInfo).then((res) => {
+    axiosSecure.post("http://localhost:5000/bookTutorials", tutorInfo).then((res) => {
       console.log(res.data);
     });
   };
