@@ -7,6 +7,7 @@ import axios from "axios";
 
 const FindTutor = () => {
   // const [tutors, setTutors] = useState([]);
+  const [search, setSearch] = useState('');
 
   const { tutors, setTutors } = useContext(AuthContext);
 
@@ -19,26 +20,34 @@ const FindTutor = () => {
       });
   }, []);
 
-  const handleSearch = (e) => {
-    e.preventDefault()
-    const form = e.target;
-    const search= form.search.value;
-
-    console.log(search);
+  useEffect(() => {
     axios.get(`http://localhost:5000/search?q=${search}`)
     .then(res=>{
       setTutors(res.data);
-      form.reset()
+      
     })
-  };
+  }, [search, setTutors]);
+
+  // const handleSearch = (e) => {
+  //   e.preventDefault()
+  //   const form = e.target;
+  //   const search= form.search.value;
+
+  //   console.log(search);
+  //   axios.get(`http://localhost:5000/search?q=${search}`)
+  //   .then(res=>{
+  //     setTutors(res.data);
+  //     form.reset()
+  //   })
+  // };
 
   return (
     <div>
       <h1 className="text-4xl text-center pb-10">FindTutor</h1>
 
-      <form className="py-10 w-fit mx-auto flex gap-3" onSubmit={handleSearch}>
+      <form className="py-10 w-fit mx-auto flex gap-3" >
         <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search" name="search"/>
+          <input type="text" className="grow" placeholder="Search" name="search" onChange={(e)=>setSearch(e.target.value)}/>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -52,14 +61,14 @@ const FindTutor = () => {
             />
           </svg>
         </label>
-        <div>
+        {/* <div>
           <button
            
             className="btn btn-active btn-secondary"
           >
             Search
           </button>
-        </div>
+        </div> */}
       </form>
 
       <div className="grid grid-cols-3 gap-6">
