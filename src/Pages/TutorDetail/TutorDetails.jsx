@@ -5,8 +5,8 @@ import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import axios from "axios";
 import useAxios from "../../hooks/useAxios.jsx";
 
-const TutorDetails = () => {
-  const { user } = useContext(AuthContext);
+const TutorDetails = () => {  
+  const { user} = useContext(AuthContext);
   // const tutor = useLoaderData();
   // console.log(tutor);
   const [tutor, setTutor]= useState([])
@@ -32,6 +32,7 @@ const TutorDetails = () => {
   } = tutor;
 
   const handleTutorDetail = () => {
+    const reviews = Number(review)
     const tutorInfo = {
       tutorId: _id,
       photo,
@@ -39,11 +40,12 @@ const TutorDetails = () => {
       price,
       tutorEmail: email,
       loggedInUserEmail: user.email,
-      review,
+      reviews,
     };
     console.log(tutorInfo);
     axiosSecure.post("http://localhost:5000/bookTutorials", tutorInfo).then((res) => {
       console.log(res.data);
+      
     });
   };
 
@@ -72,7 +74,7 @@ const TutorDetails = () => {
           <div className="flex items-center space-x-1">
             <span className="text-yellow-500 text-sm">⭐</span>
             <span className="text-gray-700 text-sm font-medium">
-              ({review ? review : ""} reviews)
+              ({review ? review  : " "}  reviews)
             </span>
           </div>
           <div className="text-lg font-semibold text-gray-900">

@@ -11,14 +11,14 @@ const FindTutor = () => {
 
   const { tutors, setTutors } = useContext(AuthContext);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/findTutor")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setTutors(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/findTutor")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       // console.log(data);
+  //       setTutors(data);
+  //     });
+  // }, []);
 
   useEffect(() => {
     axios.get(`http://localhost:5000/search?q=${search}`)

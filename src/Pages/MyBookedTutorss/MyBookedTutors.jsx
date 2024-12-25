@@ -10,16 +10,17 @@ const MyBookedTutors = () => {
     // const bookedTutors = useLoaderData()
     // console.log(bookedTutors);
     const [bookedTutors, setBookedTutors] = useState([])
-    const {user} =  useContext(AuthContext)
+    const {user,booking,setBooking} =  useContext(AuthContext)
     const axiosSecure = useAxios()
 
     useEffect(()=>{
-        axiosSecure.get(`/bookedTutorials?loggedInUserEmail=${user.email}`)
+        axiosSecure.get(`/bookedTutorials?loggedInUserEmail=${user?.email}`)
         // axios.get('http://localhost:5000/bookedTutorials', {
         //     withCredentials: true
         // })
         .then(res=>{
             setBookedTutors(res.data)
+            setBooking(true)
         })
 
 
@@ -28,7 +29,7 @@ const MyBookedTutors = () => {
         // .then(data=>{
         //     setBookedTutors(data)
         // })
-    },[])
+    },[user?.email,booking])
     return (
         <div>
             <div className="grid grid-cols-3">

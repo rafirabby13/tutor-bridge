@@ -2,10 +2,12 @@
 /* eslint-disable react/prop-types */
 
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider.jsx";
 
 const MyBookedCard = ({ booked }) => {
   // console.log(booked);
+  const {booking,setBooking } = useContext(AuthContext)
   const {
     language,
     loggedInUserEmail,
@@ -18,13 +20,17 @@ const MyBookedCard = ({ booked }) => {
   } = booked;
 //   const [reviewCount, setReviewCount] = useState(parseInt(review) + 1);
   const handleReviewIncreament = () => {
-    console.log("object", review);
+    console.log(typeof review);
  
     axios
       .patch(`http://localhost:5000/tutor/${_id}`)
       .then((res) => {
         console.log(res.data);
-      });
+        setBooking(false)
+      })
+      .catch(err=>{
+        console.log(err);
+      })
   };
 
   return (
