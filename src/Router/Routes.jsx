@@ -44,8 +44,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/myBookedTutor',
-          element: <PrivateRoute><MyBookedTutors/></PrivateRoute>,
-          loader: ()=>fetch('http://localhost:5000/bookedTutorials')
+          element: <PrivateRoute><MyBookedTutors/></PrivateRoute>
         },
         {
           path: '/myTutorials',

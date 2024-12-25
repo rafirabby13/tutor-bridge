@@ -1,21 +1,40 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import useAxios from "../../hooks/useAxios.jsx";
 
 const MyTutorils = () => {
   const { user, tutors, setTutors } = useContext(AuthContext);
   const [tutorials, setTutorials] = useState([]);
 
+  const axiosSecure = useAxios()
+
   //   const myTutorials = useLoaderData()
   //   console.log(myTutorials);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tutorr/${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setTutorials(data);
-      });
+    axiosSecure.get(`/tutorr?email=${user?.email}`)
+    .then((res) => {
+      // console.log(data);
+      setTutorials(res.data);
+    });
+
+    // axios.get(`http://localhost:5000/tutorr?email=${user?.email}`, {
+    //   withCredentials: true
+    // })
+    // .then((res) => {
+    //   // console.log(data);
+    //   setTutorials(res.data);
+    // });
+
+    // fetch(`http://localhost:5000/tutorr?email=${user?.email}`)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     // console.log(data);
+    //     setTutorials(data);
+    //   });
   }, [user.email]);
 
   const handleDelete = (id) => {

@@ -73,15 +73,15 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center gap-4">
-              <img
+              <img 
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user?.displayName}
-                data-tooltip-variant="warning"
-                className="h-16 w-16 rounded-full p-1 border-[6px]"
+                data-tooltip-variant="dark"
+                className="h-16 w-16 rounded-full p-1 border-[6px] z-20"
                 src={user?.photoURL}
                 alt=""
               />
-              <Tooltip id="my-tooltip" />
+              <Tooltip id="my-tooltip" className="z-50"/>
 
               <Link onClick={handleLogout} className="btn">
                 Logout
