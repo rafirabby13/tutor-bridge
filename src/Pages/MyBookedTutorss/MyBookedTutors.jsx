@@ -1,18 +1,23 @@
 /* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import MyBookedCard from "./MyBookedCard.jsx";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import useAxios from "../../hooks/useAxios.jsx";
+import { AuthContext } from "../../Providers/AuthProvider.jsx";
 
 const MyBookedTutors = () => {
     // const bookedTutors = useLoaderData()
     // console.log(bookedTutors);
     const [bookedTutors, setBookedTutors] = useState([])
+    const {user} =  useContext(AuthContext)
+    const axiosSecure = useAxios()
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/bookedTutorials', {
-            withCredentials: true
-        })
+        axiosSecure.get(`/bookedTutorials?loggedInUserEmail=${user.email}`)
+        // axios.get('http://localhost:5000/bookedTutorials', {
+        //     withCredentials: true
+        // })
         .then(res=>{
             setBookedTutors(res.data)
         })
