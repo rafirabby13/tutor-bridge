@@ -1,11 +1,15 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
+import useAxios from "../../hooks/useAxios.jsx";
 
 const AddTutorials = () => {
 
 
     const {user} = useContext(AuthContext)
+
+    const axiosSecure = useAxios()
 
 
   const handleSubmit = (e) => {
@@ -28,7 +32,7 @@ const AddTutorials = () => {
       review,
     };
     console.log(tutorialInfo);
-    axios.post('http://localhost:5000/addTutorials', 
+    axiosSecure.post('/addTutorials', 
         tutorialInfo
     )
     .then(res=>{

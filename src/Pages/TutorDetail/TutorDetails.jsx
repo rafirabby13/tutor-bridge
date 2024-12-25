@@ -1,23 +1,30 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import axios from "axios";
+import useAxios from "../../hooks/useAxios.jsx";
 
 const TutorDetails = () => {
   const { user } = useContext(AuthContext);
   const tutor = useLoaderData();
-  // console.log(tutor);
+  console.log(tutor);
+  // const [tutor, setTutor]= useState([])
+  // const axiosSecure=  useAxios()
+
+  // useEffect(()=>{
+  //   axiosSecure.get(`http://localhost:5000/tutor?id`, {
+  //     withCredentials: true
+  //   })
+  // },[])
   const {
     name,
     email,
     _id,
-    rating,
     review,
     price,
     language,
     description,
-    super_tutor,
     photo,
   } = tutor;
 
