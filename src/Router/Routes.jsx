@@ -10,6 +10,7 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoute.jsx";
 import MyBookedTutors from "../Pages/MyBookedTutorss/MyBookedTutors.jsx";
 import MyTutorils from "../Pages/MyTutorials/MyTutorils.jsx";
 import UpdateTutorial from "../Pages/UpdateTutorial/UpdateTutorial.jsx";
+import FindTutorCategory from "../Pages/FindTutorCategory/FindTutorCategory.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +25,12 @@ export const router = createBrowserRouter([
         {
           path: '/find-tutors',
           element: <FindTutor/>
+        },
+        {
+          path: '/find-tutors/:category',
+          element: <FindTutorCategory/>,
+          loader: ({params})=> fetch(`http://localhost:5000/tutor/category/${params.category}`)
+
         },
         {
           path: '/tutor/:details',

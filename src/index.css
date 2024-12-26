@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  /* font-family: "Ubuntu", serif; */
+  font-family: "Exo 2", serif;
+}
+
+.banner {
+  background: linear-gradient(
+      to bottom,
+      rgb(7, 47, 0),
+      rgba(0, 0, 0, 0.354)
+    ),
+    url("../src//assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

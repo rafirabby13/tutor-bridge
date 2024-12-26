@@ -10,19 +10,34 @@ const Navbar = () => {
   const items = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className={`({ isActive }) =>
+          isActive
+            ? "text-black bg-none"
+            : "text-gray-700"`}>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/find-tutors">Find Tutors</NavLink>
+        <NavLink className={`({ isActive }) =>
+          isActive
+            ? "text-black bg-none"
+            : "text-gray-700"`}  to="/find-tutors">Find Tutors</NavLink>
       </li>
       <li>
-        <NavLink to="/addTutorials">Add Tutorials</NavLink>
+        <NavLink className={`({ isActive }) =>
+          isActive
+            ? "text-black bg-none"
+            : "text-gray-700"`}  to="/addTutorials">Add Tutorials</NavLink>
       </li>
       <li>
-        <NavLink to="/myTutorials">My Tutorials</NavLink>
+        <NavLink className={`({ isActive }) =>
+          isActive
+            ? "text-black bg-none"
+            : "text-gray-700"`}  to="/myTutorials">My Tutorials</NavLink>
       </li>
       <li>
-        <NavLink to="/myBookedTutor">My booked Tutors</NavLink>
+        <NavLink className={`({ isActive }) =>
+          isActive
+            ? "text-black bg-none"
+            : "text-gray-700"`}  to="/myBookedTutor">My booked Tutors</NavLink>
       </li>
     </>
   );
@@ -39,7 +54,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 py-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,10 +80,10 @@ const Navbar = () => {
               {items}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">TutorBridge</a>
+          <a className=" text-4xl font-extrabold">TutorBridge</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{items}</ul>
+          <ul className="menu menu-horizontal text-xl px-1">{items}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
@@ -83,16 +98,16 @@ const Navbar = () => {
               />
               <Tooltip id="my-tooltip" className="z-50"/>
 
-              <Link onClick={handleLogout} className="btn">
+              <Link onClick={handleLogout} className="btn bg-[#1B4242] text-[#E2DFD0]">
                 Logout
               </Link>
             </div>
           ) : (
             <div>
-              <Link to="/login" className="btn">
+              <Link to="/login" className="btn bg-[#481E14]">
                 Login
               </Link>
-              <Link to="/register" className="btn">
+              <Link to="/register" className="btn bg-[#481E14] ">
                 Register
               </Link>
             </div>

@@ -45,7 +45,7 @@ const HistoryLeftCard = ({ history }) => {
           animate={{
             scale: [1, 0.5, 0.5, 0.5, 1],
             rotate: [0, 0, 180, 360, 0],
-            borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+            borderRadius: ["0%", "0%", "0%", "50%", "0%"],
           }}
           transition={{
             duration: 2,
