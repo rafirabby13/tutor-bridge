@@ -177,7 +177,7 @@ const UpdateTutorial = () => {
 
         {/* Submit Button */}
         <div>
-          <button className="w-full bg-pink-500 text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
+          <button className="w-full bg-[#439A97] text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
             Update
           </button>
         </div>

@@ -75,7 +75,7 @@ const MyBookedCard = ({ booked }) => {
             {/* Review Button */}
             <button
               onClick={handleReviewIncreament}
-              className="w-full mt-4 bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition"
+              className="w-full mt-4 bg-[#439A97] text-white py-2 rounded-lg hover:bg-[#2a7673] transition"
             >
               Review
             </button>

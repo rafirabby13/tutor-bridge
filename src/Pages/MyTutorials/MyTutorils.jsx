@@ -104,7 +104,7 @@ const MyTutorils = () => {
           {/* Table Body */}
           <tbody>
             {tutorials.map((tutorial) => (
-              <tr key={tutorial._id} className="hover:bg-gray-50">
+              <tr key={tutorial._id} className="">
                 <td className="p-3">{tutorial.name}</td>
                 <td className="p-3">
                   <div className="avatar">
@@ -125,11 +125,11 @@ const MyTutorils = () => {
                 <td className="p-3">{tutorial.review}</td>
                 <td className="p-3 flex gap-2">
                   <Link to={`/update/${tutorial._id}`}>
-                    <button className="btn btn-info btn-sm">Update</button>
+                    <button className="btn bg-[#439A97] text-white btn-sm">Update</button>
                   </Link>
                   <button
                     onClick={() => handleDelete(tutorial._id)}
-                    className="btn btn-error btn-sm"
+                    className="btn bg-[#439A97] text-white btn-sm"
                   >
                     Delete
                   </button>

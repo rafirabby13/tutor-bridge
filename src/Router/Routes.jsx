@@ -11,12 +11,13 @@ import MyBookedTutors from "../Pages/MyBookedTutorss/MyBookedTutors.jsx";
 import MyTutorils from "../Pages/MyTutorials/MyTutorils.jsx";
 import UpdateTutorial from "../Pages/UpdateTutorial/UpdateTutorial.jsx";
 import FindTutorCategory from "../Pages/FindTutorCategory/FindTutorCategory.jsx";
+import Error from "../Pages/Error/Error.jsx";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout/>,
-      errorElement: <div>error</div>,
+      errorElement: <Error/>,
       children: [
         {
             path: '',

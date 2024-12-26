@@ -34,11 +34,13 @@ const Register = () => {
             navigate(location?.state ? location.state : '/')
           })
           .catch((err) => {
-            console.log(err.message);
+            toast.error(err.message);
+
           });
       })
       .catch((err) => {
-        console.log(err.message);
+        toast.error(err.message);
+
       });
   };
 
@@ -51,7 +53,8 @@ const Register = () => {
         navigate(location?.state ? location.state : '/')
       })
       .catch((err) => {
-        console.log(err.message);
+        toast.error(err.message);
+
       });
   };
 
@@ -128,12 +131,12 @@ const Register = () => {
               </Link>
             </p>
             <div className="form-control mt-6 login">
-              <button className="p-2 md:p-4 bg-[#331D2C] text-white text-xl ">
+              <button className="p-2 md:p-4 bg-[#439A97] text-white text-xl ">
                 Register
               </button>
             </div>
           </form>
-          <div className="divider divider-accent">Accent</div>
+          <div className="divider divider-accent">OR</div>
           <div className="text-center w-full">
             <button
               className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#439A97] shadow-red-400 shadow-sm text-white"

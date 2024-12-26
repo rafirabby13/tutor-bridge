@@ -7,40 +7,29 @@
 body {
   /* font-family: "Ubuntu", serif; */
   font-family: "Exo 2", serif;
+  background: #fbfbfb;
 }
 
 .banner {
-  background: linear-gradient(
-      to bottom,
-      rgb(7, 47, 0),
-      rgba(0, 0, 0, 0.354)
-    ),
+  background: linear-gradient(to bottom, rgb(7, 47, 0), rgba(0, 0, 0, 0.354)),
     url("../src//assets/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
-#dark{
-  
+#dark {
   background-color: #0b0717;
-  color: #E7F6F2;
+  color: #e7f6f2;
 }
-#light{
-  
+#light {
 }
 
-#dark .banner2{
-  background: #18122B;
-  background: linear-gradient(
-      to bottom,
-      rgb(5, 32, 0),
-      rgba(0, 0, 0, 0.606)
-    ),
+#dark .banner2 {
+  background: #18122b;
+  background: linear-gradient(to bottom, rgb(5, 32, 0), rgba(0, 0, 0, 0.606)),
     url("../src//assets/bg.jpg");
 }
-
 
 #dark .sta {
   color: #e7f6f2e3;
@@ -62,12 +51,8 @@ body {
   border: none;
 }
 
-.foo{
-  background: linear-gradient(
-      to bottom,
-      rgb(4, 23, 1),
-      rgba(0, 0, 0, 0.746)
-    ),
+.foo {
+  background: linear-gradient(to bottom, rgb(4, 23, 1), rgba(0, 0, 0, 0.746)),
     url("../src//assets/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -79,18 +64,73 @@ body {
   background: #2d243b;
   border: none;
 }
-#dark  textarea {
+#dark textarea {
   color: #e7f6f2e3;
   background: #2d243b;
   border: none;
 }
 #dark .form {
   color: #e7f6f2e3;
-  background: #3F2E3E;
+  background: #3f2e3e;
   border: none;
 }
 #dark .login {
   color: #e7f6f2e3;
-  background: #3F2E3E;
+  background: #3f2e3e;
   border: none;
+}
+
+a.active {
+}
+
+.tsaCard {
+  background: linear-gradient(to bottom, rgb(4, 23, 1), rgba(0, 0, 0, 0.746)),
+    url("../src//assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.86);
+}
+.langCard {
+  background: linear-gradient(to right, #e4eaec, #e5e1dacc);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.his {
+  background: linear-gradient(to right, #fbfbfb, #e5e1dacc);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#light .feedCard {
+  background: linear-gradient(to right, #f8f6e3, #e5e1dacc);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feedCardw {
+  background: linear-gradient(to left, #f8f6e3, #e5e1dacc);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feedCardww {
+  background: linear-gradient(to left, #e6fffd8e, #e5e1da92);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.deta {
+  background: #439A97;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#dark .detailCard {
+  background: #100810;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

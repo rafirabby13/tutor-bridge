@@ -10,7 +10,7 @@ const HistoryLeftCard = ({ history }) => {
         id % 2 == 0 ? "md:col-start-3 " : "md:text-end"
       } `}
     >
-      <div className="max-w-4xl mx-auto   shadow-lg rounded-lg timeline-start mb-10 flex flex-col justify-between h-full hist p-1 md:p-10 ">
+      <div className="max-w-4xl mx-auto his  shadow-lg rounded-lg timeline-start mb-10 flex flex-col justify-between h-full hist p-1 md:p-10 ">
         {/* Icon and Year */}
         <div
           className={`flex items-center space-x-4 ${

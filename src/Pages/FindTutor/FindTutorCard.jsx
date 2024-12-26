@@ -15,12 +15,12 @@ const FindTutorCard = ({ tutor }) => {
     photo,
   } = tutor;
   return (
-    <div className="flex flex-col border border-gray-200 p-4 rounded-lg shadow-md w-full  feedback overflow-hidden">
+    <div className="flex feedCardww flex-col border border-gray-200 p-4 rounded-lg shadow-md w-full  feedback overflow-hidden">
       <div className="flex items-center px-4 py-3">
         <img
           src={photo}
           alt={name}
-          className="w-24 h-24 border-2 border-gray-200 p-2 rounded-full "
+          className="w-24 h-24 border-[4px] border-gray-200 p-2 rounded-full "
         />
         <div className="ml-4">
           <h3 className="text-lg font-semibold ">{name}</h3>
@@ -37,7 +37,7 @@ const FindTutorCard = ({ tutor }) => {
       </div>
 
       <div className="px-4 py-3 flex justify-between items-center">
-        <Link to={`/tutor/${_id}`} className="text-pink-500 font-medium hover:underline border-2 p-2 shadow-lg">
+        <Link to={`/tutor/${_id}`} className="btn bg-[#439A97] text-white  font-medium hover:underline border-2  shadow-lg">
           See Detail
         </Link>
       </div>

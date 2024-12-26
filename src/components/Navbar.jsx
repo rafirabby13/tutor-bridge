@@ -14,20 +14,22 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className={`({ isActive }) =>
-          isActive
-            ? "text-black bg-none"
-            : "text-gray-700"`}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
+          }
         >
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
-          className={`({ isActive }) =>
-          isActive
-            ? "text-black bg-none"
-            : "text-gray-700"`}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
+          }
           to="/find-tutors"
         >
           Find Tutors
@@ -35,10 +37,11 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className={`({ isActive }) =>
-          isActive
-            ? "text-black bg-none"
-            : "text-gray-700"`}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
+          }
           to="/addTutorials"
         >
           Add Tutorials
@@ -46,10 +49,11 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className={`({ isActive }) =>
-          isActive
-            ? "text-black bg-none"
-            : "text-gray-700"`}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
+          }
           to="/myTutorials"
         >
           My Tutorials
@@ -57,10 +61,11 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className={`({ isActive }) =>
-          isActive
-            ? "text-black bg-none"
-            : "text-gray-700"`}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
+          }
           to="/myBookedTutor"
         >
           My booked Tutors
@@ -115,7 +120,7 @@ const Navbar = () => {
               {items}
             </ul>
           </div>
-          <a className=" hidden lg:flex text-4xl font-extrabold">TutorBridge</a>
+          <a className=" hidden lg:flex text-3xl xl:text-4xl font-extrabold">TutorBridge</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal font-semibold flex items-center  xl:text-xl px-1">
@@ -129,7 +134,7 @@ const Navbar = () => {
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user?.displayName}
                 data-tooltip-variant="dark"
-                className="lg:h-16 lg:w-16 h-10 w-10  rounded-full p-1 border-2 lg:border-[6px] z-20"
+                className="xl:h-16 xl:w-16 h-10 w-10  rounded-full p-1 lg:p-0 xl:p-1 border-2 lg:border-[6px] z-20"
                 src={user?.photoURL}
                 alt=""
               />
@@ -137,7 +142,7 @@ const Navbar = () => {
 
               <Link
                 onClick={handleLogout}
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#0A6847] md:bg-[#0A6847] text-[#E2DFD0] md:text-[#E2DFD0]"
+                className=" border-none p-1 lg:text-xl xl:btn text-sm bg-[#439A97] xl:bg-[#439A97] text-white xl:text-white"
               >
                 Logout
               </Link>
@@ -146,19 +151,19 @@ const Navbar = () => {
             <div className="flex gap-1">
               <Link
                 to="/login"
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#0A6847] md:bg-[#0A6847] text-[#E2DFD0] md:text-[#E2DFD0]"
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#439A97] md:bg-[#439A97] text-white md:text-white"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#0A6847] md:bg-[#0A6847] text-[#E2DFD0] md:text-[#E2DFD0] "
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#439A97] md:bg-[#439A97] text-white md:text-white "
               >
                 Register
               </Link>
             </div>
           )}
-          <div className="text-2xl lg:text-6xl p-2" onClick={handleTheme}>
+          <div className="text-2xl text-[#439A97] lg:text-6xl p-2" onClick={handleTheme}>
             {theme !== "light" ? <FaToggleOn /> : <FaToggleOff />}
           </div>
         </div>

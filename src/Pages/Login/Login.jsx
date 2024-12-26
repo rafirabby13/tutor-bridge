@@ -27,7 +27,8 @@ const Login = () => {
         navigate(location?.state ? location.state : '/')
       })
       .catch((err) => {
-        console.log(err);
+        toast.error(err.message);
+
       });
   };
 
@@ -40,12 +41,12 @@ const Login = () => {
         navigate(location?.state ? location.state : '/')
       })
       .catch((err) => {
-        console.log(err.message);
+        toast.error(err.message);
       });
   };
 
   return (
-    <div className="hero feedback min-h-screen overflow-x-hidden">
+    <div className="hero feedback  overflow-x-hidden py-20">
       <Helmet>
         <title>Login | Tutor Bridge</title>
       </Helmet>
@@ -93,18 +94,18 @@ const Login = () => {
               </p>
             </div>
             <div className="form-control mt-6 login">
-              <button className="p-2 md:p-4 bg-[#331D2C] text-white md:text-xl ">
+              <button className="p-2 md:p-4 bg-[#439A97] text-white md:text-xl ">
                 Login
               </button>
             </div>
           </form>
-          <div className="divider divider-accent">Accent</div>
+          <div className="divider divider-accent">OR</div>
           <div className="text-center w-full">
             <button
               className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#439A97] shadow-red-400 shadow-sm text-white"
               onClick={handleGoogleLogin}
             >
-              Sign Up With Google
+              Sign In With Google
             </button>
           </div>
         </div>

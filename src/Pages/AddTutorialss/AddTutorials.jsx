@@ -96,6 +96,7 @@ const AddTutorials = () => {
             id="image"
             name="photo"
             className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+            required
           />
         </div>
 
@@ -159,7 +160,7 @@ const AddTutorials = () => {
 
         {/* Submit Button */}
         <div>
-          <button className="w-full bg-pink-500 text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
+          <button className="w-full bg-[#439A97] text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
             Add Tutorial
           </button>
         </div>
