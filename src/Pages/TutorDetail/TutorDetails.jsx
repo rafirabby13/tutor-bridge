@@ -5,34 +5,25 @@ import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import axios from "axios";
 import useAxios from "../../hooks/useAxios.jsx";
 
-const TutorDetails = () => {  
-  const { user} = useContext(AuthContext);
+const TutorDetails = () => {
+  const { user } = useContext(AuthContext);
   // const tutor = useLoaderData();
   // console.log(tutor);
-  const [tutor, setTutor]= useState([])
-  const axiosSecure=  useAxios()
- 
-  const {details} = useParams()
+  const [tutor, setTutor] = useState([]);
+  const axiosSecure = useAxios();
+
+  const { details } = useParams();
   // console.log(details);
-  useEffect(()=>{
-    axiosSecure.get(`/tutor/${details}`)
-    .then(res=>{
-      setTutor(res.data)
-    })
-  },[details,axiosSecure])
-  const {
-    name,
-    email,
-    _id,
-    review,
-    price,
-    language,
-    description,
-    photo,
-  } = tutor;
+  useEffect(() => {
+    axiosSecure.get(`/tutor/${details}`).then((res) => {
+      setTutor(res.data);
+    });
+  }, [details, axiosSecure]);
+  const { name, email, _id, review, price, language, description, photo } =
+    tutor;
 
   const handleTutorDetail = () => {
-    const reviews = Number(review)
+    const reviews = Number(review);
     const tutorInfo = {
       tutorId: _id,
       photo,
@@ -43,68 +34,57 @@ const TutorDetails = () => {
       reviews,
     };
     console.log(tutorInfo);
-    axiosSecure.post("http://localhost:5000/bookTutorials", tutorInfo).then((res) => {
-      console.log(res.data);
-      
-    });
+    axiosSecure
+      .post("http://localhost:5000/bookTutorials", tutorInfo)
+      .then((res) => {
+        console.log(res.data);
+      });
   };
 
   return (
-    <div className="flex flex-col border border-gray-200 rounded-lg shadow-md w-full max-w-lg bg-white overflow-hidden">
-      {/* Header Section */}
-      <div className="flex items-center px-4 py-3">
-        <img
-          src={photo ? photo : ""}
-          alt={name ? name : ""}
-          className="w-16 h-16 rounded-full object-cover"
-        />
-        <div className="ml-4">
-          <h3 className="text-lg font-semibold text-gray-800">
-            {name ? name : ""}
-          </h3>
-          <p className="text-sm text-gray-500 flex items-center">
-            {language ? language : ""}
+    <div className="min-h-screen py-20">
+      <div className="flex feedback flex-col border border-gray-300 rounded-xl shadow-lg w-full max-w-lg  overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 ">
+        {/* Header Section */}
+        <div className="flex items-center px-6 py-4 ">
+          <img
+            src={photo || "https://via.placeholder.com/150"}
+            alt={name || "Tutor"}
+            className="w-28 h-28 p-2 rounded-full  border-4 border-pink-400"
+          />
+          <div className="ml-5">
+            <h3 className="text-2xl font-bold ">{name || "Unknown Tutor"}</h3>
+            <p className="text-xl ">{language || "Languages not specified"}</p>
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-1">
+              <span className="text-yellow-400 text-xl">⭐</span>
+              <span className=" text-xl font-medium">
+                ({review || 0} reviews)
+              </span>
+            </div>
+            <div className="text-2xl font-semibold text-pink-500">
+              ${price || 0}/hr
+            </div>
+          </div>
+          <p className="mt-4 text-xl  line-clamp-3">
+            {description || "No description available."}
           </p>
         </div>
-      </div>
 
-      {/* Content Section */}
-      <div className="px-4 py-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-1">
-            <span className="text-yellow-500 text-sm">⭐</span>
-            <span className="text-gray-700 text-sm font-medium">
-              ({review ? review  : " "}  reviews)
-            </span>
-          </div>
-          <div className="text-lg font-semibold text-gray-900">
-            {price ? price : ""}
-          </div>
+        {/* Footer Section */}
+        <div className="px-6 py-4 flex justify-between items-center border-t border-gray-200">
+          <button
+            onClick={handleTutorDetail}
+            to={`/tutor/${_id}`}
+            className="bg-pink-500 text-xl text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-600 transition-all"
+          >
+            Book Now
+          </button>
         </div>
-        <div className="mt-3 flex justify-between text-sm text-gray-500">
-          <div>
-            <p>
-              Speaks{" "}
-              <span className="font-semibold">{language ? language : ""}</span>
-            </p>
-          </div>
-        </div>
-        <p className="mt-3 text-sm text-gray-600">
-          {description ? description : ""}
-        </p>
-      </div>
-
-      {/* Footer Section */}
-      <div className="px-4 py-3 flex justify-between items-center">
-        <button
-          onClick={handleTutorDetail}
-          className="bg-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-pink-600 transition"
-        >
-          Book Tutor
-        </button>
-        <button className="text-pink-500 font-medium hover:underline">
-          Send message
-        </button>
       </div>
     </div>
   );

@@ -15,10 +15,10 @@ const Language = () => {
   return (
     <div>
       <div className="w-3/5 ">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4 p-6 shadow-md shadow-blue-400">
+        <h2 className="text-4xl font-bold  mb-4 p-6 shadow-md shadow-blue-400">
           Popular Language Tutors
         </h2>
-        <p className="text-lg text-gray-600 mb-12 p-2">
+        <p className="text-lg  mb-12 p-2">
           Discover highly-rated tutors for the most popular languages around the
           world. Learn from the best and achieve your language goals with ease.
         </p>

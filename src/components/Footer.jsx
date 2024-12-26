@@ -1,44 +1,78 @@
+/* eslint-disable no-unused-vars */
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer bg-base-200 text-base-content p-10">
-        <aside>
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            className="fill-current"
-          >
-            <path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-          </svg>
+    <div className="foo mt-20">
+      <footer className="foote py-5 md:py-10">
+        <div className="text-center py-6 md:py-20 md:animate__animated animate__slideInDown animate__slower animate__infinite">
+          <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#ffffff]">
+            TutorBridge
+          </h1>
+        </div>
+
+        <div className="flex md:flex-row gap-5 flex-col items-start text-[#ffffff] justify-between px-4 md:px-20">
+          <div className="flex flex-col gap-2 text-sm md:text-xl">
+            <h6 className="footer-title">Services</h6>
+            <a className="link link-hover" href="/services/language-tutors">Language Tutors</a>
+            <a className="link link-hover" href="/services/subject-tutors">Subject Tutors</a>
+            <a className="link link-hover" href="/services/test-prep">Test Prep</a>
+            <a className="link link-hover" href="/services/specialized-courses">Specialized Courses</a>
+          </div>
+          <div className="flex flex-col gap-2 text-sm md:text-xl">
+            <h6 className="footer-title">Support</h6>
+            <a className="link link-hover" href="/support/faqs">FAQs</a>
+            <a className="link link-hover" href="/support/booking-guide">Booking Guide</a>
+            <a className="link link-hover" href="/support/cancellations">Cancellations</a>
+            <a className="link link-hover" href="/support/contact">Contact Support</a>
+          </div>
+          <div className="flex flex-col gap-2 text-sm md:text-xl">
+            <h6 className="footer-title">About</h6>
+            <a className="link link-hover" href="/about">Our Story</a>
+            <a className="link link-hover" href="/about/team">Our Team</a>
+            <a className="link link-hover" href="/about/terms">Terms of Service</a>
+            <a className="link link-hover" href="/about/privacy">Privacy Policy</a>
+          </div>
+        </div>
+      </footer>
+      <footer className="foote px-4 md:px-20 text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffe4] py-10">
+        <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm md:text-2xl text-center md:text-start ">
           <p>
-            ACME Industries Ltd.
+            &copy; {new Date().getFullYear()} TutorConnect Online Platform. All Rights Reserved.
             <br />
-            Providing reliable tech since 1992
+            Your trusted partner in education since 2015
+            <br />
+            <h1 className="underline">
+              Contact us: <span className="font-bold">support@tutorconnect.com | +1-800-555-7890</span>
+            </h1>
           </p>
         </aside>
-        <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+        <nav className="md:place-self-center md:justify-self-end text-[#ffffffc2]">
+          <div className="grid grid-flow-col gap-4">
+            
+          <div className="text-xl md:text-5xl">
+              <FaFacebook />
+            </div>
+            <div className="text-xl md:text-5xl">
+              <FaTwitter />
+            </div>
+            <div className="text-xl md:text-5xl">
+              <FaInstagram />
+            </div>
+            <div className="text-xl md:text-5xl">
+              <FaGithub />
+            </div>
+            <div className="text-xl md:text-5xl">
+              <FaLinkedin />
+            </div>
+            
+          </div>
         </nav>
       </footer>
     </div>

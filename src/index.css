@@ -20,3 +20,72 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+#dark{
+  
+  background-color: #0b0717;
+  color: #E7F6F2;
+}
+#light{
+  
+}
+
+#dark .banner{
+  background: #18122B;
+  background: linear-gradient(
+      to bottom,
+      rgb(5, 32, 0),
+      rgba(0, 0, 0, 0.606)
+    ),
+    url("../src//assets/bg.jpg");
+}
+
+
+#dark .sta {
+  color: #e7f6f2e3;
+  background: #101d2b;
+}
+#dark .language {
+  color: #e7f6f2e3;
+  background: #101d2b;
+  border: none;
+}
+#dark .hist {
+  color: #e7f6f2e3;
+  background: #101d2b;
+  border: none;
+}
+#dark .feedback {
+  color: #e7f6f2e3;
+  background: #101d2b;
+  border: none;
+}
+
+.foo{
+  background: linear-gradient(
+      to bottom,
+      rgb(4, 23, 1),
+      rgba(0, 0, 0, 0.746)
+    ),
+    url("../src//assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#dark input, textarea {
+  color: #e7f6f2e3;
+  background: #2d243b;
+  border: none;
+}
+#dark .form {
+  color: #e7f6f2e3;
+  background: #3F2E3E;
+  border: none;
+}
+#dark .login {
+  color: #e7f6f2e3;
+  background: #3F2E3E;
+  border: none;
+}

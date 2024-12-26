@@ -58,7 +58,7 @@ const MyTutorils = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen py-20">
       <div className="overflow-x-auto w-full p-5">
         <table className="table w-full border border-gray-200">
           {/* Table Head */}
@@ -114,7 +114,7 @@ const MyTutorils = () => {
 
         {/* Empty State */}
         {tutorials.length === 0 && (
-          <p className="text-center text-gray-500 mt-5">No tutorials found.</p>
+          <p className="text-center  mt-5">No tutorials found.</p>
         )}
       </div>
     </div>

@@ -2,12 +2,20 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider.jsx";
 
 const MainLayout = () => {
+  const {theme, setTheme} = useContext(AuthContext)
+
   return (
-    <div className="mx-20 " >
+    <div  id={theme}>
+      <section className="mx-7">
       <Navbar />
+      </section>
+      <section className="mx-20 ">
       <Outlet />
+      </section>
       <Footer />
     </div>
   );

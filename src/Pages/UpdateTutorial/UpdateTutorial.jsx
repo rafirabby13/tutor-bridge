@@ -18,7 +18,9 @@ const UpdateTutorial = () => {
         const language = form.language.value;
         const price = form.price.value;
         const description = form.description.value;
-        const review = form.review.value;
+        const review2 = form.review.value;
+    const review = Number(review2)
+
         const tutorialInfo = {
           email,
           name,
@@ -50,12 +52,12 @@ const UpdateTutorial = () => {
         // })
     }
   return (
-    <div>
+    <div className="min-h-screen py-10">
       <form
         onSubmit={handleSubmit}
-        className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
+        className="max-w-lg mx-auto feedback  p-8 rounded-lg shadow-lg space-y-6"
       >
-        <h2 className="text-2xl font-bold text-gray-800 text-center">
+        <h2 className="text-2xl font-bold  text-center">
           Update Tutor Profile
         </h2>
 
@@ -63,7 +65,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Name
           </label>
@@ -81,7 +83,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Email
           </label>
@@ -99,7 +101,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="image"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Tutorial Image
           </label>
@@ -116,7 +118,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="language"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Language
           </label>
@@ -136,7 +138,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="price"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Price ($)
           </label>
@@ -156,7 +158,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="description"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Description
           </label>
@@ -174,7 +176,7 @@ const UpdateTutorial = () => {
         <div>
           <label
             htmlFor="review"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium "
           >
             Review
           </label>

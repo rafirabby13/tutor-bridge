@@ -3,41 +3,67 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 const Navbar = () => {
-  const { user, logoutUser } = useContext(AuthContext);
+  const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
   // console.log(user);
 
   const items = (
     <>
       <li>
-        <NavLink to="/" className={`({ isActive }) =>
+        <NavLink
+          to="/"
+          className={`({ isActive }) =>
           isActive
             ? "text-black bg-none"
-            : "text-gray-700"`}>Home</NavLink>
+            : "text-gray-700"`}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink className={`({ isActive }) =>
+        <NavLink
+          className={`({ isActive }) =>
           isActive
             ? "text-black bg-none"
-            : "text-gray-700"`}  to="/find-tutors">Find Tutors</NavLink>
+            : "text-gray-700"`}
+          to="/find-tutors"
+        >
+          Find Tutors
+        </NavLink>
       </li>
       <li>
-        <NavLink className={`({ isActive }) =>
+        <NavLink
+          className={`({ isActive }) =>
           isActive
             ? "text-black bg-none"
-            : "text-gray-700"`}  to="/addTutorials">Add Tutorials</NavLink>
+            : "text-gray-700"`}
+          to="/addTutorials"
+        >
+          Add Tutorials
+        </NavLink>
       </li>
       <li>
-        <NavLink className={`({ isActive }) =>
+        <NavLink
+          className={`({ isActive }) =>
           isActive
             ? "text-black bg-none"
-            : "text-gray-700"`}  to="/myTutorials">My Tutorials</NavLink>
+            : "text-gray-700"`}
+          to="/myTutorials"
+        >
+          My Tutorials
+        </NavLink>
       </li>
       <li>
-        <NavLink className={`({ isActive }) =>
+        <NavLink
+          className={`({ isActive }) =>
           isActive
             ? "text-black bg-none"
-            : "text-gray-700"`}  to="/myBookedTutor">My booked Tutors</NavLink>
+            : "text-gray-700"`}
+          to="/myBookedTutor"
+        >
+          My booked Tutors
+        </NavLink>
       </li>
     </>
   );
@@ -52,9 +78,13 @@ const Navbar = () => {
       });
   };
 
+  const handleTheme=()=>{
+    setTheme(current=> current == "light" ? "dark" : "light")
+  }
+
   return (
     <div>
-      <div className="navbar bg-base-100 py-10">
+      <div className="navbar  py-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -87,8 +117,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="flex items-center gap-4">
-              <img 
+            <div className="flex items-center gap-4  ">
+              <img
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user?.displayName}
                 data-tooltip-variant="dark"
@@ -96,22 +126,28 @@ const Navbar = () => {
                 src={user?.photoURL}
                 alt=""
               />
-              <Tooltip id="my-tooltip" className="z-50"/>
+              <Tooltip id="my-tooltip" className="z-50" />
 
-              <Link onClick={handleLogout} className="btn bg-[#1B4242] text-[#E2DFD0]">
+              <Link
+                onClick={handleLogout}
+                className="btn border-none text-xl bg-[#1B4242] text-[#E2DFD0]"
+              >
                 Logout
               </Link>
             </div>
           ) : (
             <div>
-              <Link to="/login" className="btn bg-[#481E14]">
+              <Link to="/login" className="btn border-none text-xl bg-[#481E14]  text-[#E2DFD0]">
                 Login
               </Link>
-              <Link to="/register" className="btn bg-[#481E14] ">
+              <Link to="/register" className="btn border-none text-xl bg-[#481E14]  text-[#E2DFD0] ">
                 Register
               </Link>
             </div>
           )}
+          <div className="text-6xl p-2" onClick={handleTheme}>
+            {theme !=="light" ? <FaToggleOn /> : <FaToggleOff />}
+          </div>
         </div>
       </div>
     </div>

@@ -15,10 +15,10 @@ const History = () => {
   return (
     <div>
       <div className="w-3/5">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4 p-6 shadow-md shadow-blue-400">
+        <h2 className="text-4xl font-bold  mb-4 p-6 shadow-md shadow-blue-400 history">
           Our History
         </h2>
-        <p className="text-lg text-gray-600 mb-12 p-2">
+        <p className="text-lg  mb-12 p-2">
           Since our founding in 1998, we have grown from a small initiative into
           a global platform that connects learners with expert tutors worldwide.
           Our journey reflects a commitment to quality education, innovation,

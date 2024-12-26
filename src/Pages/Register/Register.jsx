@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/Firebase.init.js";
-
+import { Link } from "react-router-dom";
+import a1 from '../../assets/Animation - 1735202464545.json'
+import Lottie from "lottie-react";
 const Register = () => {
 
     const {registerUser} = useContext(AuthContext)
@@ -40,18 +42,18 @@ const Register = () => {
 
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero feedback min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Register now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
+        <Lottie
+                className="h-[300px] md:h-[600px]"
+                animationData={a1}
+                loop={true}
+              />
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card form w-full max-w-md shrink-0 shadow-2xl">
           <form className="card-body" onSubmit={handleRegister}>
+             <h1 className="text-4xl font-bold text-center underline">Register</h1>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -100,13 +102,9 @@ const Register = () => {
                 required
               />
             </div>
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+            <p className="md:text-2xl py-4">Already have an account? <Link className="underline font-semibold" to='/login'>Login</Link></p>
+            <div className="form-control mt-6 login">
+              <button className="p-4 bg-[#331D2C] text-white text-xl ">Register</button>
             </div>
           </form>
         </div>

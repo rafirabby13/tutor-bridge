@@ -10,7 +10,7 @@ const HistoryLeftCard = ({ history }) => {
         id % 2 == 0 ? "col-start-3 " : "text-end"
       } `}
     >
-      <div className="max-w-4xl mx-auto  bg-white shadow-lg rounded-lg timeline-start mb-10  p-10">
+      <div className="max-w-4xl mx-auto   shadow-lg rounded-lg timeline-start mb-10 hist p-10">
         {/* Icon and Year */}
         <div className={`flex items-center space-x-4 ${
         id % 2 == 0 ? "" : "justify-end"
@@ -37,7 +37,7 @@ const HistoryLeftCard = ({ history }) => {
           <h2 className="text-2xl font-bold mt-4">{title}</h2>
 
           {/* Description */}
-          <p className="text-gray-600 mt-2">{description}</p>
+          <p className=" mt-2">{description}</p>
        
 
         {/* Image */}
@@ -56,7 +56,7 @@ const HistoryLeftCard = ({ history }) => {
           }}
           src={image}
           alt={title}
-          className="w-full mt-6 rounded-lg shadow-md overflow-hidden"
+          className="w-full h-80 mt-6 rounded-lg shadow-md overflow-hidden"
         />
       </div>
     </div>

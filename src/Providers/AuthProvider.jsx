@@ -14,6 +14,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [booking, setBooking] = useState(true);
+  const [theme, setTheme] = useState('light')
   const [tutors, setTutors] = useState([]);
 
   const registerUser = (email, password) => {
@@ -39,7 +40,9 @@ const AuthProvider = ({ children }) => {
     tutors,
     setTutors,
     booking,
-    setBooking
+    setBooking,
+    theme, 
+    setTheme
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

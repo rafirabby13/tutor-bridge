@@ -8,8 +8,8 @@ import Stats from "../../components/Stats.jsx";
 const Home = () => {
     return (
         <div className="space-y-20">
-            {/* <Banner></Banner> */}
-            {/* <Stats></Stats> */}
+            <Banner></Banner>
+            <Stats></Stats>
             <Language></Language>
             <History></History>
             <Feedback></Feedback>

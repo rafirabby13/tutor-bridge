@@ -17,12 +17,12 @@ const Feedback = () => {
   return (
     <div>
       <div>
-        <div className="text-center">
-          <p className="text-orange-500 font-semibold uppercase">Feedback</p>
-          <h2 className="text-3xl font-bold text-gray-800 my-4">
+        <div className="w-3/5">
+          {/* <p className="text-orange-500 font-semibold uppercase">Feedback</p> */}
+          <h2 className="text-4xl font-bold  mb-4 p-6 shadow-md shadow-blue-400 history">
             What People Think About Us
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg  mb-12 p-2">
             Our platform brings you the convenience of instant access to a
             diverse range of tutors across various subjects and languages,
             ensuring accessible and quality learning experiences for everyone.

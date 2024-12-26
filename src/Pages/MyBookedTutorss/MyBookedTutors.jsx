@@ -32,7 +32,7 @@ const MyBookedTutors = () => {
     },[user?.email,booking])
     return (
         <div>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 gap-6">
                 {
                     bookedTutors.map((booked, i)=> <MyBookedCard
                     key={i}

@@ -5,12 +5,9 @@ import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import useAxios from "../../hooks/useAxios.jsx";
 
 const AddTutorials = () => {
+  const { user } = useContext(AuthContext);
 
-
-    const {user} = useContext(AuthContext)
-
-    const axiosSecure = useAxios()
-
+  const axiosSecure = useAxios();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +18,8 @@ const AddTutorials = () => {
     const language = form.language.value;
     const price = form.price.value;
     const description = form.description.value;
-    const review = form.review.value;
+    const review2 = form.review.value;
+    const review = Number(review2);
     const tutorialInfo = {
       email,
       name,
@@ -32,29 +30,23 @@ const AddTutorials = () => {
       review,
     };
     console.log(tutorialInfo);
-    axiosSecure.post('/addTutorials', 
-        tutorialInfo
-    )
-    .then(res=>{
-        console.log(res.data);
-    })
+    axiosSecure.post("/addTutorials", tutorialInfo).then((res) => {
+      console.log(res.data);
+    });
   };
   return (
-    <div>
+    <div className="py-20">
       <form
         onSubmit={handleSubmit}
-        className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
+        className="max-w-lg mx-auto feedback p-8 rounded-lg shadow-lg space-y-6"
       >
-        <h2 className="text-2xl font-bold text-gray-800 text-center">
+        <h2 className="text-2xl font-bold  text-center">
           Create Tutor Profile
         </h2>
 
         {/* Name */}
         <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="name" className="block text-sm font-medium ">
             Name
           </label>
           <input
@@ -62,34 +54,29 @@ const AddTutorials = () => {
             id="name"
             name="name"
             value={user?.displayName}
-            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 input"
             required
           />
         </div>
 
         {/* Email */}
         <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="email" className="block text-sm font-medium ">
             Email
           </label>
           <input
             type="email"
             id="email"
             name="email"
-value={user?.email}            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+            value={user?.email}
+            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
             required
           />
         </div>
 
         {/* Image Upload */}
         <div>
-          <label
-            htmlFor="image"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="image" className="block text-sm font-medium ">
             Tutorial Image
           </label>
           <input
@@ -102,10 +89,7 @@ value={user?.email}            className="mt-1 w-full p-2 border border-gray-300
 
         {/* Language */}
         <div>
-          <label
-            htmlFor="language"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="language" className="block text-sm font-medium ">
             Language
           </label>
           <input
@@ -120,10 +104,7 @@ value={user?.email}            className="mt-1 w-full p-2 border border-gray-300
 
         {/* Price */}
         <div>
-          <label
-            htmlFor="price"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="price" className="block text-sm font-medium ">
             Price ($)
           </label>
           <input
@@ -138,10 +119,7 @@ value={user?.email}            className="mt-1 w-full p-2 border border-gray-300
 
         {/* Description */}
         <div>
-          <label
-            htmlFor="description"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="description" className="block text-sm font-medium ">
             Description
           </label>
           <textarea
@@ -154,10 +132,7 @@ value={user?.email}            className="mt-1 w-full p-2 border border-gray-300
           />
         </div>
         <div>
-          <label
-            htmlFor="review"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="review" className="block text-sm font-medium ">
             Review
           </label>
           <input

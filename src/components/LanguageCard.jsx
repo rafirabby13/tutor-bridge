@@ -11,10 +11,10 @@ const LanguageCard = ({ lnguage }) => {
   const category= cat.toLowerCase()
   return (
     <div>
-      <Link to={`/find-tutors/${category}`} className="flex items-center border-2 p-3 justify-between">
+      <Link to={`/find-tutors/${category}`} className="flex items-center shadow-xl border-2 p-6 justify-between language">
         <div className="card-content">
           <h3 className="text-xl font-semibold text-blue-600">{title}</h3>
-          <p className="text-gray-700 mt-2">{teachers} teachers</p>
+          <p className=" mt-2">{teachers} teachers</p>
         </div>
         <div className="card-arrow">
           <SlArrowRight />

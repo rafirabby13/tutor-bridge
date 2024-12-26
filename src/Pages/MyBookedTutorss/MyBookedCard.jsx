@@ -6,8 +6,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 
 const MyBookedCard = ({ booked }) => {
-  // console.log(booked);
-  const {booking,setBooking } = useContext(AuthContext)
+  console.log(booked);
+  const { booking, setBooking } = useContext(AuthContext);
   const {
     language,
     loggedInUserEmail,
@@ -18,64 +18,50 @@ const MyBookedCard = ({ booked }) => {
     tutorId,
     _id,
   } = booked;
-//   const [reviewCount, setReviewCount] = useState(parseInt(review) + 1);
+  //   const [reviewCount, setReviewCount] = useState(parseInt(review) + 1);
   const handleReviewIncreament = () => {
     console.log(typeof review);
- 
+
     axios
-      .patch(`http://localhost:5000/tutor/${_id}`)
+      .patch(`http://localhost:5000/tutor/${tutorId}`)
       .then((res) => {
         console.log(res.data);
-        setBooking(false)
+        setBooking(false);
       })
-      .catch(err=>{
+      .catch((err) => {
         console.log(err);
-      })
+      });
   };
 
   return (
-    <div>
-      <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+    <div className="  ">
+      <div >
+      <div className=" mx-auto feedback  rounded-lg shadow-lg overflow-hidden p-5">
         {/* Image Section */}
-        <img className="w-full h-96 " src={photo} alt="Tutor" loading="lazy" />
+        <img
+          className="w-full h-64"
+          src={photo || "https://via.placeholder.com/300"}
+          alt={name || "Tutor"}
+          loading="lazy"
+        />
 
         {/* Card Content */}
         <div className="p-5">
-          {/* Tutor Email */}
-          <h2 className="text-lg font-semibold text-gray-800">
-            Tutor Email: <span className="text-pink-500">{tutorEmail}</span>
-          </h2>
+          <h2 className="text-lg font-semibold ">{name || "Tutor Name"}</h2>
 
-          {/* Logged In User */}
-          <p className="text-sm text-gray-600 mt-2">
-            Logged-in User Email: {loggedInUserEmail}
+          <p className="text-sm  mt-2">
+            Language: <span className=" font-medium">{language || "N/A"}</span>
           </p>
 
-          {/* Language */}
-          <p className="text-sm text-gray-600 mt-2">
-            Language:{" "}
-            <span className="text-gray-800 font-medium">{language}</span>
-          </p>
-          <p className="text-xl font-bold text-gray-600 mt-2">
-            Review : <span className="text-gray-800 font-medium">{review}</span>
+          <p className="text-sm  mt-2">
+            Price: <span className=" font-medium">${price || "-"}</span>
           </p>
 
-          {/* Price */}
-          <p className="text-sm text-gray-600 mt-2">
-            Price: <span className="text-gray-800 font-medium">${price}</span>
+          <p className="text-sm  mt-2">
+            Reviews: <span className=" font-medium">{review || 0}</span>
           </p>
 
-          {/* Tutor ID */}
-          <p className="text-xs text-gray-500 mt-2">
-            Tutor ID: <span className="text-gray-700">{tutorId}</span>
-          </p>
-
-          {/* _ID */}
-          <p className="text-xs text-gray-500 mt-2">
-            Unique ID: <span className="text-gray-700">{_id}</span>
-          </p>
-
-          {/* Book Button */}
+          {/* Review Button */}
           <button
             onClick={handleReviewIncreament}
             className="w-full mt-4 bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition"
@@ -84,6 +70,7 @@ const MyBookedCard = ({ booked }) => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

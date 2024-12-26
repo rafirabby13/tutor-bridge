@@ -42,17 +42,17 @@ const FindTutor = () => {
   // };
 
   return (
-    <div>
-      <h1 className="text-4xl text-center pb-10">FindTutor</h1>
+    <div className="min-h-screen">
+      <h1 className="text-4xl feedback font-bold  mb-4 p-6 shadow-md shadow-blue-400 history">FindTutor</h1>
 
-      <form className="py-10 w-fit mx-auto flex gap-3" >
-        <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search" name="search" onChange={(e)=>setSearch(e.target.value)}/>
+      <form className="py-10  w-fit mx-auto flex gap-3" >
+        <label className="input input-bordered flex items-center gap-2 feedback text-2xl p-8">
+          <input type="text" className="grow " placeholder="Search" name="search" onChange={(e)=>setSearch(e.target.value)}/>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill="currentColor"
-            className="h-4 w-4 opacity-70"
+            className="h-8 w-8 opacity-70"
           >
             <path
               fillRule="evenodd"
