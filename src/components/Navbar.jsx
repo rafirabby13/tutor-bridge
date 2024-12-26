@@ -78,19 +78,19 @@ const Navbar = () => {
       });
   };
 
-  const handleTheme=()=>{
-    setTheme(current=> current == "light" ? "dark" : "light")
-  }
+  const handleTheme = () => {
+    setTheme((current) => (current == "light" ? "dark" : "light"));
+  };
 
   return (
     <div>
-      <div className="navbar  py-10">
+      <div className="navbar items-center lg:py-10">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -105,15 +105,15 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
             >
               {items}
             </ul>
           </div>
-          <a className=" text-4xl font-extrabold">TutorBridge</a>
+          <a className=" hidden lg:flex text-4xl font-extrabold">TutorBridge</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal text-xl px-1">{items}</ul>
+          <ul className="menu menu-horizontal font-semibold flex items-center  xl:text-xl px-1">{items}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
@@ -122,7 +122,7 @@ const Navbar = () => {
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user?.displayName}
                 data-tooltip-variant="dark"
-                className="h-16 w-16 rounded-full p-1 border-[6px] z-20"
+                className="lg:h-16 lg:w-16 h-10 w-10  rounded-full p-1 border-2 lg:border-[6px] z-20"
                 src={user?.photoURL}
                 alt=""
               />
@@ -130,23 +130,29 @@ const Navbar = () => {
 
               <Link
                 onClick={handleLogout}
-                className="btn border-none text-xl bg-[#1B4242] text-[#E2DFD0]"
+                className=" border-none p-1 lg:text-xl text-sm bg-[#1B4242] text-[#E2DFD0]"
               >
                 Logout
               </Link>
             </div>
           ) : (
-            <div>
-              <Link to="/login" className="btn border-none text-xl bg-[#481E14]  text-[#E2DFD0]">
+            <div className="flex gap-1">
+              <Link
+                to="/login"
+                className=" border-none lg:text-xl text-sm bg-[#1B4242] p-1 text-[#E2DFD0]"
+              >
                 Login
               </Link>
-              <Link to="/register" className="btn border-none text-xl bg-[#481E14]  text-[#E2DFD0] ">
+              <Link
+                to="/register"
+                className=" border-none lg:text-xl text-sm bg-[#1B4242] p-1  text-[#E2DFD0] "
+              >
                 Register
               </Link>
             </div>
           )}
-          <div className="text-6xl p-2" onClick={handleTheme}>
-            {theme !=="light" ? <FaToggleOn /> : <FaToggleOff />}
+          <div className="text-2xl lg:text-6xl p-2" onClick={handleTheme}>
+            {theme !== "light" ? <FaToggleOn /> : <FaToggleOff />}
           </div>
         </div>
       </div>

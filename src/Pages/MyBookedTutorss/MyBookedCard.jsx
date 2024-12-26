@@ -39,7 +39,7 @@ const MyBookedCard = ({ booked }) => {
       <div className=" mx-auto feedback  rounded-lg shadow-lg overflow-hidden p-5">
         {/* Image Section */}
         <img
-          className="w-full h-64"
+          className="w-full h-32 md:h-64"
           src={photo || "https://via.placeholder.com/300"}
           alt={name || "Tutor"}
           loading="lazy"

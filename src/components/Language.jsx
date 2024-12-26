@@ -14,16 +14,16 @@ const Language = () => {
   }, []);
   return (
     <div>
-      <div className="w-3/5 ">
-        <h2 className="text-4xl font-bold  mb-4 p-6 shadow-md shadow-blue-400">
+      <div className="md:w-3/5 ">
+        <h2 className="text-xl md:text-4xl font-bold  mb-4 p-2 md:p-6 shadow-md shadow-blue-400">
           Popular Language Tutors
         </h2>
-        <p className="text-lg  mb-12 p-2">
+        <p className="text-sm md:text-lg  md:mb-12 p-2">
           Discover highly-rated tutors for the most popular languages around the
           world. Learn from the best and achieve your language goals with ease.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid  grid-cols-2 lg:grid-cols-3 gap-4">
         {language.map((lnguage) => (
           <LanguageCard key={lnguage.id} lnguage={lnguage}></LanguageCard>
         ))}

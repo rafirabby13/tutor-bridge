@@ -27,12 +27,12 @@ const Login = () => {
     }
 
   return (
-    <div className="hero feedback min-h-screen">
+    <div className="hero feedback min-h-screen overflow-x-hidden">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
         
               <Lottie
-                className="h-[300px] md:h-[600px]"
+                className="h-[200px] md:h-[600px]"
                 animationData={a1}
                 loop={true}
               />
@@ -40,7 +40,7 @@ const Login = () => {
         </div>
         <div className="card form  w-full max-w-md shrink-0 shadow-2xl  shadow-[#331D2C]">
           <form className="card-body" onSubmit={handleLogin}>
-            <h1 className="text-4xl font-bold text-center underline">Login</h1>
+            <h1 className="text-xl md:text-4xl font-bold text-center underline">Login</h1>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -72,7 +72,7 @@ const Login = () => {
             </p>
             </div>
             <div className="form-control mt-6 login">
-              <button className="p-4 bg-[#331D2C] text-white text-xl ">Login</button>
+              <button className="p-2 md:p-4 bg-[#331D2C] text-white md:text-xl ">Login</button>
             </div>
           </form>
         </div>

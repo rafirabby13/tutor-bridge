@@ -35,10 +35,10 @@ const AddTutorials = () => {
     });
   };
   return (
-    <div className="py-20">
+    <div className="md:py-20">
       <form
         onSubmit={handleSubmit}
-        className="max-w-lg mx-auto feedback p-8 rounded-lg shadow-lg space-y-6"
+        className="max-w-lg mx-auto feedback p-3 md:p-8 rounded-lg shadow-lg space-y-6"
       >
         <h2 className="text-2xl font-bold  text-center">
           Create Tutor Profile

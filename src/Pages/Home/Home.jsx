@@ -8,12 +8,12 @@ import Stats from "../../components/Stats.jsx";
 const Home = () => {
     return (
         <div className="space-y-20">
-            <Banner></Banner>
+             <Banner></Banner>
             <Stats></Stats>
             <Language></Language>
-            <History></History>
-            <Feedback></Feedback>
-            <Outlet/>
+           <History></History>
+             <Feedback></Feedback>
+            <Outlet/> 
         </div>
     );
 };

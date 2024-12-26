@@ -31,7 +31,7 @@ body {
   
 }
 
-#dark .banner{
+#dark .banner2{
   background: #18122B;
   background: linear-gradient(
       to bottom,
@@ -74,7 +74,12 @@ body {
   background-size: cover;
 }
 
-#dark input, textarea {
+#dark input {
+  color: #e7f6f2e3;
+  background: #2d243b;
+  border: none;
+}
+#dark  textarea {
   color: #e7f6f2e3;
   background: #2d243b;
   border: none;

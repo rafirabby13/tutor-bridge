@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import a1 from '../assets/Animation - 1735188939390.json'
-import a2 from '../assets/Animation - 1735189026676.json'
-import a3 from '../assets/Animation - 1735189162111.json'
+import a1 from "../assets/Animation - 1735188939390.json";
+import a2 from "../assets/Animation - 1735189026676.json";
+import a3 from "../assets/Animation - 1735189162111.json";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -26,21 +26,23 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col-reverse items-center md:gap-10   bg-gradient-to-r from-[#D4F6FF] via-[#FBFBFB] to-[#FFCCE1] banner ">
+          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner ">
             <div className=" p-2  md:w-2/5  space-y-4 ">
-              <h1 className="text-2xl md:text-4xl font-bold">
-              Find Your Perfect Tutor
+              <h1 className=" md:text-2xl lg:text-4xl font-bold">
+                Find Your Perfect Tutor
               </h1>
-              <p className="text-lg md:text-xl">
-              Connect with experienced tutors across various languages and subjects. Unlock your potential with personalized one-on-one sessions designed just for you!
+              <p className="md:text-xl text-sm">
+                Connect with experienced tutors across various languages and
+                subjects. Unlock your potential with personalized one-on-one
+                sessions designed just for you!
               </p>
-              <button className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
+              <button className="p-1 px-6 md:py-3  text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
                 Explore
               </button>
             </div>
             <div className="md:w-3/5">
               <Lottie
-                className="h-[300px] md:h-[600px]"
+                className="h-[200px]  md:h-[600px]"
                 animationData={a1}
                 loop={true}
               />
@@ -48,24 +50,26 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   bg-gradient-to-l from-[#A0D683] via-[#FFFECB] to-[#CB9DF0] banner">
+          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10    banner">
             <div
               className="p-2 md:pr-12 md:w-2/5  
                space-y-4"
             >
-              <h1 className="text-2xl md:text-4xl font-bold">
-              Flexible Scheduling, Global Reach
+              <h1 className=" md:text-2xl lg:text-4xl font-bold">
+                Flexible Scheduling, Global Reach
               </h1>
-              <p className="text-lg md:text-xl">
-              Learn at your own pace, on your schedule. Access tutors from around the world and enjoy seamless online sessions tailored to your goals.
+              <p className="md:text-xl text-sm">
+                Learn at your own pace, on your schedule. Access tutors from
+                around the world and enjoy seamless online sessions tailored to
+                your goals.
               </p>
-              <button className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
+              <button className="p-1 px-6 md:py-3  text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
                 Explore
               </button>
             </div>
             <div className="md:w-3/5">
               <Lottie
-                className="h-[300px] md:h-[600px]"
+                className="h-[200px]  md:h-[600px]"
                 animationData={a2}
                 loop={true}
               />
@@ -73,21 +77,22 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   bg-gradient-to-r from-[#CBE2B5] via-[#FFF] to-[#DCBFFF] banner">
+          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner">
             <div className="p-2 md:pr-12 md:w-2/5   space-y-4">
-              <h1 className="text-2xl lg:text-4xl font-bold">
-              Your Learning Journey Starts Here
+              <h1 className=" md:text-2xl lg:text-4xl font-bold">
+                Your Learning Journey Starts Here
               </h1>
-              <p className="text-xl">
-              Whether you're learning a new language or mastering a subject, our expert tutors are here to guide you every step of the way.
+              <p className="md:text-xl text-sm">
+                Whether you're learning a new language or mastering a subject,
+                our expert tutors are here to guide you every step of the way.
               </p>
-              <button className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
+              <button className="p-1 px-6 md:py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 text-sm hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
                 Explore
               </button>
             </div>
             <div className="md:w-3/5">
               <Lottie
-                className="h-[300px] md:h-[600px]"
+                className="h-[200px]  md:h-[600px]"
                 animationData={a3}
                 loop={true}
               />

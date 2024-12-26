@@ -42,11 +42,11 @@ const FindTutor = () => {
   // };
 
   return (
-    <div className="min-h-screen">
-      <h1 className="text-4xl feedback font-bold  mb-4 p-6 shadow-md shadow-blue-400 history">FindTutor</h1>
+    <div className="min-h-screen py-10">
+      <h1 className="text-xl md:text-4xl font-bold  mb-4 p-2 md:p-6 shadow-md shadow-blue-400 history">FindTutor</h1>
 
       <form className="py-10  w-fit mx-auto flex gap-3" >
-        <label className="input input-bordered flex items-center gap-2 feedback text-2xl p-8">
+        <label className="input input-bordered flex items-center gap-2 feedback md:text-2xl md:p-8">
           <input type="text" className="grow " placeholder="Search" name="search" onChange={(e)=>setSearch(e.target.value)}/>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const FindTutor = () => {
         </div> */}
       </form>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         {tutors.map((tutor, i) => (
           <FindTutorCard key={i} tutor={tutor}></FindTutorCard>
         ))}

@@ -10,10 +10,10 @@ const MainLayout = () => {
 
   return (
     <div  id={theme}>
-      <section className="mx-7">
+      <section className="xl:mx-7">
       <Navbar />
       </section>
-      <section className="mx-20 ">
+      <section className="lg:mx-20 ">
       <Outlet />
       </section>
       <Footer />
