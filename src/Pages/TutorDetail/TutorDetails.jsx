@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import axios from "axios";
 import useAxios from "../../hooks/useAxios.jsx";
+import Swal from "sweetalert2";
 
 const TutorDetails = () => {
   const { user } = useContext(AuthContext);
   // const tutor = useLoaderData();
   // console.log(tutor);
+  const navigate = useNavigate()
   const [tutor, setTutor] = useState([]);
   const axiosSecure = useAxios();
 
@@ -23,7 +25,7 @@ const TutorDetails = () => {
     tutor;
 
   const handleTutorDetail = () => {
-    const reviews = Number(review);
+    // const reviews = Number(review);
     const tutorInfo = {
       tutorId: _id,
       photo,
@@ -31,13 +33,20 @@ const TutorDetails = () => {
       price,
       tutorEmail: email,
       loggedInUserEmail: user.email,
-      reviews,
+      review,
     };
     console.log(tutorInfo);
+    Swal.fire({
+      title: "Tutor Booked!",
+      icon: "success",
+      draggable: true
+    });
     axiosSecure
       .post("http://localhost:5000/bookTutorials", tutorInfo)
       .then((res) => {
         console.log(res.data);
+        navigate('/')
+
       });
   };
 

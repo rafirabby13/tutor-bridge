@@ -1,13 +1,15 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 const UpdateTutorial = () => {
 
     const {user} = useContext(AuthContext)
     const tutorial = useLoaderData()
     // console.log(tutorial);
-
+    const navigate = useNavigate()
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -41,6 +43,12 @@ const UpdateTutorial = () => {
         .then(res=>res.json())
         .then(res=>{
             console.log(res);
+            Swal.fire({
+                    title: "Added Successfully!",
+                    icon: "success",
+                    draggable: true
+                  });
+                  navigate('/')
         })
         .catch(err=>{
             console.log(err.message);
@@ -53,6 +61,11 @@ const UpdateTutorial = () => {
     }
   return (
     <div className="min-h-screen py-10">
+      <Helmet>
+                
+                <title>Update | Tutor Bridge</title>
+                
+            </Helmet>
       <form
         onSubmit={handleSubmit}
         className="max-w-lg mx-auto feedback  p-8 rounded-lg shadow-lg space-y-6"

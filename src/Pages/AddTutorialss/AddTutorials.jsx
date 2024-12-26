@@ -3,12 +3,15 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import useAxios from "../../hooks/useAxios.jsx";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddTutorials = () => {
   const { user } = useContext(AuthContext);
 
   const axiosSecure = useAxios();
-
+const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -32,10 +35,21 @@ const AddTutorials = () => {
     console.log(tutorialInfo);
     axiosSecure.post("/addTutorials", tutorialInfo).then((res) => {
       console.log(res.data);
+      Swal.fire({
+        title: "Added Successfully!",
+        icon: "success",
+        draggable: true
+      });
+      navigate('/')
     });
   };
   return (
     <div className="md:py-20">
+      <Helmet>
+                
+                <title>Add Tutorials | Tutor Bridge</title>
+                
+            </Helmet>
       <form
         onSubmit={handleSubmit}
         className="max-w-lg mx-auto feedback p-3 md:p-8 rounded-lg shadow-lg space-y-6"
@@ -148,7 +162,7 @@ const AddTutorials = () => {
         {/* Submit Button */}
         <div>
           <button className="w-full bg-pink-500 text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
-            Submit Profile
+            Add Tutorial
           </button>
         </div>
       </form>

@@ -4,6 +4,8 @@ import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import useAxios from "../../hooks/useAxios.jsx";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 const MyTutorils = () => {
   const { user, tutors, setTutors } = useContext(AuthContext);
@@ -38,27 +40,52 @@ const MyTutorils = () => {
   }, [user.email]);
 
   const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/tutorials/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            if (res.deletedCount > 0) {
+              const remaining = tutors?.filter((tutor) => tutor._id != id);
+              const remaining2 = tutorials?.filter((tutor) => tutor._id != id);
+              // console.log(remaining);
+              setTutors(remaining);
+              setTutorials(remaining2);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
+
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
     // console.log(id);
-    fetch(`http://localhost:5000/tutorials/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.deletedCount > 0) {
-          const remaining = tutors?.filter((tutor) => tutor._id != id);
-          const remaining2 = tutorials?.filter((tutor) => tutor._id != id);
-          // console.log(remaining);
-          setTutors(remaining);
-          setTutorials(remaining2);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+   
   };
 
   return (
     <div className="min-h-screen py-20">
+      <Helmet>
+                
+                <title>My Tutorials | Tutor Bridge</title>
+                
+            </Helmet>
       <div className="overflow-x-auto w-full p-5">
         <table className="table w-full border border-gray-200">
           {/* Table Head */}

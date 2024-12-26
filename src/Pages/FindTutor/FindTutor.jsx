@@ -4,6 +4,7 @@ import FindTutorCard from "./FindTutorCard.jsx";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const FindTutor = () => {
   // const [tutors, setTutors] = useState([]);
@@ -43,6 +44,11 @@ const FindTutor = () => {
 
   return (
     <div className="min-h-screen py-10">
+      <Helmet>
+                
+                <title>Find Tutor | Tutor Bridge</title>
+                
+            </Helmet>
       <h1 className="text-xl md:text-4xl font-bold  mb-4 p-2 md:p-6 shadow-md shadow-blue-400 history">FindTutor</h1>
 
       <form className="py-10  w-fit mx-auto flex gap-3" >
