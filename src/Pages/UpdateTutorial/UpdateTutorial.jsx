@@ -43,7 +43,7 @@ const UpdateTutorial = () => {
       .then((res) => {
         console.log(res);
         Swal.fire({
-          title: "Added Successfully!",
+          title: "Updated Successfully!",
           icon: "success",
           draggable: true,
         });

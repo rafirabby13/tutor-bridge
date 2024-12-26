@@ -33,6 +33,7 @@ const Register = () => {
             console.log("updated");
         toast.success('Registered Successfully')
         
+        
 
             navigate(location?.state ? location.state : '/')
           })
