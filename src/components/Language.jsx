@@ -15,6 +15,7 @@ const Language = () => {
   return (
     <div>
       <div className="md:w-3/5 ">
+      
         <h2 className="text-xl md:text-4xl font-bold  mb-4 p-2 md:p-6 shadow-md shadow-blue-400">
           Popular Language Tutors
         </h2>

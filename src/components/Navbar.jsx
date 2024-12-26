@@ -4,6 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { FaToggleOff, FaToggleOn } from "react-icons/fa";
+import Swal from "sweetalert2";
 const Navbar = () => {
   const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
   // console.log(user);
@@ -71,7 +72,11 @@ const Navbar = () => {
   const handleLogout = () => {
     logoutUser()
       .then(() => {
-        alert("success");
+        Swal.fire({
+          title: "Succeed",
+          text: "Logged out ..ooohhhhooooo..",
+          icon: "success",
+        });
       })
       .catch((err) => {
         console.log(err.message);
@@ -113,7 +118,9 @@ const Navbar = () => {
           <a className=" hidden lg:flex text-4xl font-extrabold">TutorBridge</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal font-semibold flex items-center  xl:text-xl px-1">{items}</ul>
+          <ul className="menu menu-horizontal font-semibold flex items-center  xl:text-xl px-1">
+            {items}
+          </ul>
         </div>
         <div className="navbar-end">
           {user ? (
@@ -130,7 +137,7 @@ const Navbar = () => {
 
               <Link
                 onClick={handleLogout}
-                className=" border-none p-1 lg:text-xl text-sm bg-[#1B4242] text-[#E2DFD0]"
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#0A6847] md:bg-[#0A6847] text-[#E2DFD0] md:text-[#E2DFD0]"
               >
                 Logout
               </Link>
@@ -139,13 +146,13 @@ const Navbar = () => {
             <div className="flex gap-1">
               <Link
                 to="/login"
-                className=" border-none lg:text-xl text-sm bg-[#1B4242] p-1 text-[#E2DFD0]"
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#0A6847] md:bg-[#0A6847] text-[#E2DFD0] md:text-[#E2DFD0]"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className=" border-none lg:text-xl text-sm bg-[#1B4242] p-1  text-[#E2DFD0] "
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#0A6847] md:bg-[#0A6847] text-[#E2DFD0] md:text-[#E2DFD0] "
               >
                 Register
               </Link>

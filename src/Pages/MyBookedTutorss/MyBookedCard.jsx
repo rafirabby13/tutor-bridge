@@ -9,13 +9,14 @@ import { useNavigate } from "react-router-dom";
 
 const MyBookedCard = ({ booked }) => {
   const navigate = useNavigate();
-  console.log(booked);
+  console.log('booked', booked);
   const { booking, setBooking } = useContext(AuthContext);
   const {
     language,
     loggedInUserEmail,
     photo,
     price,
+    name,
     review,
     tutorEmail,
     tutorId,
@@ -26,7 +27,7 @@ const MyBookedCard = ({ booked }) => {
     console.log(typeof review);
 
     axios
-      .patch(`http://localhost:5000/tutor/${tutorId}`)
+      .patch(`https://online-tutor-booking-platform-server.vercel.app/tutor/${tutorId}`)
       .then((res) => {
         console.log(res.data);
         setBooking(false);
@@ -45,7 +46,7 @@ const MyBookedCard = ({ booked }) => {
   return (
     <div className="  ">
       <div>
-        <div className=" mx-auto feedback  rounded-lg shadow-lg overflow-hidden p-5">
+        <div className=" mx-auto feedback  rounded-lg shadow-lg overflow-hidden p-5 flex flex-col justify-between h-full">
           {/* Image Section */}
           <img
             className="w-full h-32 md:h-64"
@@ -56,7 +57,7 @@ const MyBookedCard = ({ booked }) => {
 
           {/* Card Content */}
           <div className="p-5">
-            <h2 className="text-lg font-semibold ">{name || "Tutor Name"}</h2>
+            <h2 className="text-lg font-semibold ">{name? name : "Tutor"}</h2>
 
             <p className="text-sm  mt-2">
               Language:{" "}

@@ -29,13 +29,13 @@ export const router = createBrowserRouter([
         {
           path: '/find-tutors/:category',
           element: <FindTutorCategory/>,
-          loader: ({params})=> fetch(`http://localhost:5000/tutor/category/${params.category}`)
+          // loader: ({params})=> fetch(`https://online-tutor-booking-platform-server.vercel.app/tutor/category/${params.category}`)
 
         },
         {
           path: '/tutor/:details',
           element: <PrivateRoute><TutorDetails/></PrivateRoute>,
-          // loader: ({params})=> fetch(`http://localhost:5000/tutor/${params.details}`)
+          // loader: ({params})=> fetch(`https://online-tutor-booking-platform-server.vercel.app/tutor/${params.details}`)
         },
         {
           path: '/login',
@@ -56,12 +56,12 @@ export const router = createBrowserRouter([
         {
           path: '/myTutorials',
           element: <PrivateRoute><MyTutorils/></PrivateRoute>,
-          loader: ()=>fetch("http://localhost:5000/findTutor")
+          loader: ()=>fetch("https://online-tutor-booking-platform-server.vercel.app/findTutor")
         },
         {
           path: '/update/:id',
           element: <UpdateTutorial/>,
-          loader: ({params})=>fetch(`http://localhost:5000/updateTutorials/${params.id}`)
+          loader: ({params})=>fetch(`https://online-tutor-booking-platform-server.vercel.app/updateTutorials/${params.id}`)
         }
       ]
     },

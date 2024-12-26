@@ -11,7 +11,7 @@ const AddTutorials = () => {
   const { user } = useContext(AuthContext);
 
   const axiosSecure = useAxios();
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -38,18 +38,16 @@ const navigate = useNavigate()
       Swal.fire({
         title: "Added Successfully!",
         icon: "success",
-        draggable: true
+        draggable: true,
       });
-      navigate('/')
+      navigate("/");
     });
   };
   return (
     <div className="md:py-20">
       <Helmet>
-                
-                <title>Add Tutorials | Tutor Bridge</title>
-                
-            </Helmet>
+        <title>Add Tutorials | Tutor Bridge</title>
+      </Helmet>
       <form
         onSubmit={handleSubmit}
         className="max-w-lg mx-auto feedback p-3 md:p-8 rounded-lg shadow-lg space-y-6"

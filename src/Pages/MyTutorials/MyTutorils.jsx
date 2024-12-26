@@ -23,7 +23,7 @@ const MyTutorils = () => {
       setTutorials(res.data);
     });
 
-    // axios.get(`http://localhost:5000/tutorr?email=${user?.email}`, {
+    // axios.get(`https://online-tutor-booking-platform-server.vercel.app/tutorr?email=${user?.email}`, {
     //   withCredentials: true
     // })
     // .then((res) => {
@@ -31,7 +31,7 @@ const MyTutorils = () => {
     //   setTutorials(res.data);
     // });
 
-    // fetch(`http://localhost:5000/tutorr?email=${user?.email}`)
+    // fetch(`https://online-tutor-booking-platform-server.vercel.app/tutorr?email=${user?.email}`)
     //   .then((res) => res.json())
     //   .then((data) => {
     //     // console.log(data);
@@ -50,7 +50,7 @@ const MyTutorils = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tutorials/${id}`, {
+        fetch(`https://online-tutor-booking-platform-server.vercel.app/tutorials/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

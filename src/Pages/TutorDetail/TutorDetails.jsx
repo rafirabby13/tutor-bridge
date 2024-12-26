@@ -29,6 +29,7 @@ const TutorDetails = () => {
     const tutorInfo = {
       tutorId: _id,
       photo,
+      name,
       language,
       price,
       tutorEmail: email,
@@ -42,7 +43,7 @@ const TutorDetails = () => {
       draggable: true
     });
     axiosSecure
-      .post("http://localhost:5000/bookTutorials", tutorInfo)
+      .post("https://online-tutor-booking-platform-server.vercel.app/bookTutorials", tutorInfo)
       .then((res) => {
         console.log(res.data);
         navigate('/')

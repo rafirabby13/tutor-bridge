@@ -8,7 +8,7 @@ import { Navigate, useLocation, useNavigate } from "react-router-dom";
 const PrivateRoute = ({children}) => {
     // const navigte = useNavigate()
   const location = useLocation()
-  console.log(location);
+//   console.log(location);
     const {loading, user} = useContext(AuthContext)
     if (loading) {
         return <Loading/>
