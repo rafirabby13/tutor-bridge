@@ -6,22 +6,22 @@ const FeedbackCard = ({ feedback }) => {
   const { name, role, location, relation, feedback2, rating, img } = feedback;
 
   return (
-    <div className="feedback md:py-10  md:px-12 lg:px-24 l ">
-      <div className=" shadow-lg rounded-lg p-1  md:p-6 mt-10 flex flex-col justify-between min-h-full  mx-auto">
-        <div className="  flex-1">
-          <p className=" italic text-sm md:text-3xl text-center mb-6">
+    <div className="feedback md:py-10 md:px-12 lg:px-24">
+      <div className="shadow-lg rounded-lg p-1 md:p-6 mt-10 flex flex-col justify-between min-h-[400px] max-h-[400px] mx-auto">
+        <div className="flex-1 flex items-center">
+          <p className="italic text-sm md:text-2xl text-center leading-relaxed">
             "{feedback2}"
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center  h-full gap-4">
+        <div className="flex flex-col items-center justify-center mt-6 gap-4">
           <img
             src={img}
             alt={`${name}'s avatar`}
-            className="w-24 h-24 rounded-full"
+            className="w-24 h-24 rounded-full object-cover"
           />
           <div className="text-center">
-            <p className="font-bold ">{name}</p>
-            <p className="text-sm ">({relation})</p>
+            <p className="font-bold text-lg">{name}</p>
+            <p className="text-sm">({relation})</p>
           </div>
         </div>
       </div>
