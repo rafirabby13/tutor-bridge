@@ -8,7 +8,7 @@ import Lottie from "lottie-react";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
 const Register = () => {
-  const { registerUser, googleLogin } = useContext(AuthContext);
+  const { registerUser, googleLogin ,setUser} = useContext(AuthContext);
 
   const navigate = useNavigate()
   const handleRegister = (e) => {
@@ -23,6 +23,8 @@ const Register = () => {
     registerUser(email, password)
       .then((res) => {
         console.log(res.user);
+        setUser(res.user)
+
         updateProfile(auth.currentUser, {
           displayName: name,
           photoURL: photo,
@@ -30,6 +32,7 @@ const Register = () => {
           .then(() => {
             console.log("updated");
         toast.success('Registered Successfully')
+        
 
             navigate(location?.state ? location.state : '/')
           })
@@ -49,7 +52,7 @@ const Register = () => {
       .then((res) => {
         console.log(res.user);
         toast.success('Registered Successfully')
-        // setUser(res.user)
+        setUser(res.user)
         navigate(location?.state ? location.state : '/')
       })
       .catch((err) => {

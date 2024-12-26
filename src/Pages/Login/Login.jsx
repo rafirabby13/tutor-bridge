@@ -8,9 +8,9 @@ import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { loginUser, googleLogin } = useContext(AuthContext);
-  const navigate = useNavigate()
-  const location = useLocation()
+  const { loginUser, googleLogin, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
   // console.log(location);
 
   const handleLogin = (e) => {
@@ -21,14 +21,13 @@ const Login = () => {
     console.log(email, password);
     loginUser(email, password)
       .then((res) => {
-        console.log(res.user);
-        toast.success('Login Successfully')
+        setUser(res.user);
+        toast.success("Login Successfully");
 
-        navigate(location?.state ? location.state : '/')
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         toast.error(err.message);
-
       });
   };
 
@@ -36,9 +35,9 @@ const Login = () => {
     googleLogin()
       .then((res) => {
         console.log(res.user);
-        toast.success('Login Successfully')
-        // setUser(res.user)
-        navigate(location?.state ? location.state : '/')
+        toast.success("Login Successfully");
+        setUser(res.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         toast.error(err.message);
