@@ -8,11 +8,27 @@ body {
   /* font-family: "Ubuntu", serif; */
   font-family: "Exo 2", serif;
   background: #fbfbfb;
+  background: #F5F5F5;
 }
 
-.banner {
-  background: linear-gradient(to bottom, rgb(7, 47, 0), rgba(0, 0, 0, 0.354)),
+#light .banner {
+  /* background: linear-gradient(to bottom, rgb(7, 47, 0), rgba(0, 0, 0, 0.354)),
+    url("../src//assets/bg.jpg"); */
+  background: linear-gradient(to bottom, #254336, #4b5945ce),
     url("../src//assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #EDEAE0;
+
+}
+#light  .navbar2 {
+  background: #439a97e6;
+  background: #254336   ;
+  border: 2px solid #254336 ;
+  box-shadow: 2px 2px 2px #254336;
+  color: #EEEEEE;
+  color: #DAD3BE;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,15 +37,17 @@ body {
 #dark {
   background-color: #0b0717;
   color: #e7f6f2;
+  color: #DAD3BE;
+
 }
 #light {
 }
 
-#dark .banner2 {
+/* #dark .banner2 {
   background: #18122b;
   background: linear-gradient(to bottom, rgb(5, 32, 0), rgba(0, 0, 0, 0.606)),
     url("../src//assets/bg.jpg");
-}
+} */
 
 #dark .sta {
   color: #e7f6f2e3;
@@ -57,6 +75,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
+
 }
 
 #dark input {
@@ -84,42 +104,69 @@ a.active {
 }
 
 .tsaCard {
-  background: linear-gradient(to bottom, rgb(4, 23, 1), rgba(0, 0, 0, 0.746)),
+  background: linear-gradient(to bottom, #6b8a7ae6, rgba(0, 0, 0, 0.746)),
     url("../src//assets/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: rgba(255, 255, 255, 0.86);
+  color: #EDEAE0;
 }
 .langCard {
-  background: linear-gradient(to right, #e4eaec, #e5e1dacc);
+  background: linear-gradient(to bottom, #6B8A7A, #6B8A7A);
+  color: #EDEAE0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .his {
-  background: linear-gradient(to right, #fbfbfb, #e5e1dacc);
+  background: linear-gradient(to right, #6B8A7A, #6B8A7A);
+  color: #EDEAE0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #light .feedCard {
-  background: linear-gradient(to right, #f8f6e3, #e5e1dacc);
+  background: linear-gradient(to right, #6B8A7A, #6B8A7A);
+  
+  color: #EDEAE0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .feedCardw {
-  background: linear-gradient(to left, #f8f6e3, #e5e1dacc);
+  background: linear-gradient(to left, #254336, #254336);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.feedCardww {
-  background: linear-gradient(to left, #e6fffd8e, #e5e1da92);
+.findTutor {
+  background: linear-gradient(to left, #6B8A7A, #6B8A7A);
+  background-position: center;
+  color: #EDEAE0;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#light .contact {
+  background: linear-gradient(to right, #254336, #254336);
+  
+  color: #EDEAE0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#light .contact input, textarea{
+  background: linear-gradient(to right, #B7B597, #B7B597);
+  background: linear-gradient(to right, #6B8A7A, #6B8A7A);
+  color: black;
+  
+
+}
+#light .contact ::placeholder{
+  color: rgb(240, 214, 214);
+  
+
 }
 .deta {
   background: #439A97;
@@ -133,4 +180,12 @@ a.active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+#light .addForm textarea{
+  background: white;
+}
+#light .updateForm textarea{
+  background: white;
 }

@@ -64,7 +64,7 @@ const UpdateTutorial = () => {
       </Helmet>
       <form
         onSubmit={handleSubmit}
-        className="max-w-lg mx-auto feedback  p-8 rounded-lg shadow-lg space-y-6"
+        className="max-w-lg mx-auto feedback updateForm  p-8 rounded-lg shadow-lg space-y-6"
       >
         <h2 className="text-2xl font-bold  text-center">
           Update Tutor Profile
@@ -177,7 +177,7 @@ const UpdateTutorial = () => {
 
         {/* Submit Button */}
         <div>
-          <button className="w-full bg-[#439A97] text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
+          <button className="w-full bg-[#254336] text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
             Update
           </button>
         </div>

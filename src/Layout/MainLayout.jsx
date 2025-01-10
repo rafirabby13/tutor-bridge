@@ -1,20 +1,31 @@
 /* eslint-disable no-unused-vars */
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Flip, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Banner from "../components/Banner.jsx";
 const MainLayout = () => {
   const { theme, setTheme } = useContext(AuthContext);
-
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <div id={theme}>
-      <section className="xl:mx-7">
+      <section>
         <Navbar />
       </section>
-      <section className="lg:mx-20 ">
+      <section className="h-16 lg:h-[156px]"></section>
+      {location.pathname == "/" ? (
+        <section className="mb-40">
+          <Banner></Banner>
+        </section>
+      ) : (
+        ""
+      )}
+
+      <section className="md:max-w-[85%] mx-auto space-y-40">
         <Outlet />
       </section>
       <Footer />

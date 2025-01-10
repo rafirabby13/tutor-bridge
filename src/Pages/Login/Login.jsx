@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const { loginUser, googleLogin, setUser } = useContext(AuthContext);
@@ -93,20 +94,25 @@ const Login = () => {
               </p>
             </div>
             <div className="form-control mt-6 login">
-              <button className="p-2 md:p-4 bg-[#439A97] text-white md:text-xl ">
+              <button className="p-2 md:p-4 bg-[#254336] text-white md:text-xl ">
                 Login
               </button>
             </div>
           </form>
-          <div className="divider divider-accent">OR</div>
-          <div className="text-center w-full">
+          <div className="divider divider-[#254336]">OR</div>
+          <div onClick={handleGoogleLogin} className="form-control mt-6 login">
+              <button className="p-2 md:p-4 px-10 bg-[#254336] text-white md:text-xl flex items-center justify-center gap-4 mb-10 w-fit mx-auto">
+             <FaGoogle /> Sign In With Google
+              </button>
+            </div>
+          {/* <div className="text-center w-full">
             <button
-              className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#439A97] shadow-red-400 shadow-sm text-white"
+              className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#254336] shadow-red-400 shadow-sm text-white"
               onClick={handleGoogleLogin}
             >
               Sign In With Google
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

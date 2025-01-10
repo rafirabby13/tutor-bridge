@@ -125,11 +125,11 @@ const MyTutorils = () => {
                 <td className="p-3">{tutorial.review}</td>
                 <td className="p-3 flex gap-2">
                   <Link to={`/update/${tutorial._id}`}>
-                    <button className="btn bg-[#439A97] text-white btn-sm">Update</button>
+                    <button className="btn bg-[#254336] text-[#EEEEEE] btn-sm">Update</button>
                   </Link>
                   <button
                     onClick={() => handleDelete(tutorial._id)}
-                    className="btn bg-[#439A97] text-white btn-sm"
+                    className="btn bg-[#254336] text-[#EEEEEE] btn-sm"
                   >
                     Delete
                   </button>

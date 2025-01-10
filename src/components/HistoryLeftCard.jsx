@@ -18,7 +18,7 @@ const HistoryLeftCard = ({ history }) => {
           }`}
         >
           <div className="text-yellow-500 text-4xl">{icon}</div>
-          <p className="text-lg text-gray-500 font-medium">{year}</p>
+          <p className="text-lg  font-medium">{year}</p>
           <div className="timeline-middle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const HistoryLeftCard = ({ history }) => {
             }}
             src={image}
             alt={title}
-            className="w-full h-40 md:h-80 mt-6 rounded-lg shadow-md overflow-hidden"
+            className="w-full h-40 md:h-80 mt-6 rounded-lg shadow-md overflow-hidden object-cover object-center"
           />
         </div>
       </div>

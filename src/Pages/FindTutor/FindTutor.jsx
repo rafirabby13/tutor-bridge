@@ -57,10 +57,10 @@ const FindTutor = () => {
       </h1>
 
       <form className="py-10  w-fit mx-auto flex gap-3">
-        <label className="input input-bordered flex items-center gap-2 feedback md:text-2xl md:p-8">
+        <label className="input input-bordered flex items-center gap-2 feedback md:text-2xl md:p-8 bg-[#254336] text-white">
           <input
             type="text"
-            className="grow "
+            
             placeholder="Search"
             name="search"
             onChange={(e) => setSearch(e.target.value)}
@@ -69,7 +69,7 @@ const FindTutor = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill="currentColor"
-            className="h-8 w-8 opacity-70"
+            className="h-8 w-8 "
           >
             <path
               fillRule="evenodd"

@@ -50,7 +50,7 @@ const AddTutorials = () => {
       </Helmet>
       <form
         onSubmit={handleSubmit}
-        className="max-w-lg mx-auto feedback p-3 md:p-8 rounded-lg shadow-lg space-y-6"
+        className="max-w-lg mx-auto feedback p-3 md:p-8 rounded-lg shadow-lg space-y-6 addForm"
       >
         <h2 className="text-2xl font-bold  text-center">
           Create Tutor Profile
@@ -95,7 +95,7 @@ const AddTutorials = () => {
             type="text"
             id="image"
             name="photo"
-            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+            className="mt-1 w-full p-2  border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
             required
           />
         </div>
@@ -110,7 +110,7 @@ const AddTutorials = () => {
             id="language"
             name="language"
             placeholder="e.g., English, Spanish"
-            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+            className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-pink-500  focus:border-pink-500"
             required
           />
         </div>
@@ -160,7 +160,7 @@ const AddTutorials = () => {
 
         {/* Submit Button */}
         <div>
-          <button className="w-full bg-[#439A97] text-white py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
+          <button className="w-full bg-[#254336] text-[#DAD3BE] py-2 rounded-lg shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 transition">
             Add Tutorial
           </button>
         </div>

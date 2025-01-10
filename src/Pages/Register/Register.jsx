@@ -7,10 +7,11 @@ import a1 from "../../assets/Animation - 1735202464545.json";
 import Lottie from "lottie-react";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 const Register = () => {
-  const { registerUser, googleLogin ,setUser} = useContext(AuthContext);
+  const { registerUser, googleLogin, setUser } = useContext(AuthContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -23,7 +24,7 @@ const Register = () => {
     registerUser(email, password)
       .then((res) => {
         console.log(res.user);
-        setUser(res.user)
+        setUser(res.user);
 
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -31,20 +32,16 @@ const Register = () => {
         })
           .then(() => {
             console.log("updated");
-        toast.success('Registered Successfully')
-        
-        
+            toast.success("Registered Successfully");
 
-            navigate(location?.state ? location.state : '/')
+            navigate(location?.state ? location.state : "/");
           })
           .catch((err) => {
             toast.error(err.message);
-
           });
       })
       .catch((err) => {
         toast.error(err.message);
-
       });
   };
 
@@ -52,13 +49,12 @@ const Register = () => {
     googleLogin()
       .then((res) => {
         console.log(res.user);
-        toast.success('Registered Successfully')
-        setUser(res.user)
-        navigate(location?.state ? location.state : '/')
+        toast.success("Registered Successfully");
+        setUser(res.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         toast.error(err.message);
-
       });
   };
 
@@ -135,18 +131,15 @@ const Register = () => {
               </Link>
             </p>
             <div className="form-control mt-6 login">
-              <button className="p-2 md:p-4 bg-[#439A97] text-white text-xl ">
+              <button className="p-2 md:p-4 bg-[#254336] text-white text-xl ">
                 Register
               </button>
             </div>
           </form>
-          <div className="divider divider-accent">OR</div>
-          <div className="text-center w-full">
-            <button
-              className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#439A97] shadow-red-400 shadow-sm text-white"
-              onClick={handleGoogleLogin}
-            >
-              Sign Up With Google
+          <div className="divider ">OR</div>
+          <div onClick={handleGoogleLogin} className="form-control mt-6 login">
+            <button className="p-2 md:p-4 px-10 bg-[#254336] text-white md:text-xl flex items-center justify-center gap-4 mb-10 w-fit mx-auto">
+              <FaGoogle /> Sign In With Google
             </button>
           </div>
         </div>

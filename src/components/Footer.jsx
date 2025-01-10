@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="foo mt-20">
       <footer className="foote py-5 md:py-10">
         <div className="text-center py-6 md:py-20 md:animate__animated animate__slideInDown animate__slower animate__infinite">
-          <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#ffffff]">
+          <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#DAD3BE]">
             TutorBridge
           </h1>
         </div>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </footer>
       <footer className="foote px-4 md:px-20 text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffe4] py-10">
-        <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm md:text-2xl text-center md:text-start ">
+        <aside className="grid-flow-col items-center text-[#DAD3BE] text-sm md:text-2xl text-center md:text-start ">
           <p>
             &copy; {new Date().getFullYear()} TutorConnect Online Platform. All Rights Reserved.
             <br />
@@ -53,7 +53,7 @@ const Footer = () => {
             </h1>
           </p>
         </aside>
-        <nav className="md:place-self-center md:justify-self-end text-[#ffffffc2]">
+        <nav className="md:place-self-center md:justify-self-end text-[#DAD3BE]">
           <div className="grid grid-flow-col gap-4">
             
           <div className="text-xl md:text-5xl">

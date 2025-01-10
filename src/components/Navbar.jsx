@@ -16,7 +16,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
               : "font-bold"
           }
         >
@@ -27,7 +27,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
               : "font-bold"
           }
           to="/find-tutors"
@@ -39,7 +39,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
               : "font-bold"
           }
           to="/addTutorials"
@@ -51,7 +51,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
               : "font-bold"
           }
           to="/myTutorials"
@@ -63,7 +63,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
               : "font-bold"
           }
           to="/myBookedTutor"
@@ -93,8 +93,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="navbar items-center lg:py-10">
+    <div className=" navbar2 fixed top-0 right-0 left-0 z-30 backdrop-blur-sm ">
+      <div className="navbar items-center xl:px-20 lg:py-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className=" lg:hidden">
@@ -115,12 +115,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content text-white bg-green-950 rounded-box z-50 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content text-[#F6F4F0] bg-green-950 rounded-box z-50 mt-3 w-52 p-2 shadow"
             >
               {items}
             </ul>
           </div>
-          <a className=" hidden lg:flex text-3xl xl:text-4xl font-extrabold">TutorBridge</a>
+          <a className=" hidden lg:flex text-3xl xl:text-4xl font-extrabold">
+            TutorBridge
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal font-semibold flex items-center  xl:text-xl px-1">
@@ -134,7 +136,7 @@ const Navbar = () => {
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user?.displayName}
                 data-tooltip-variant="dark"
-                className="xl:h-16 xl:w-16 h-10 w-10  rounded-full p-1 lg:p-0 xl:p-1 border-2 lg:border-[6px] z-20"
+                className="xl:h-16 xl:w-16 h-10 w-10  rounded-full p-1 lg:p-0 xl:p-1 border-2 lg:border-[6px] z-20 border-[#6B8A7A]"
                 src={user?.photoURL}
                 alt=""
               />
@@ -142,7 +144,7 @@ const Navbar = () => {
 
               <Link
                 onClick={handleLogout}
-                className=" border-none p-1 lg:text-xl xl:btn text-sm bg-[#439A97] xl:bg-[#439A97] text-white xl:text-white"
+                className=" border-none p-1 lg:text-xl xl:btn text-sm bg-[#6B8A7A] xl:bg-[#6B8A7A] text-[#F6F4F0] xl:text-[#F6F4F0]"
               >
                 Logout
               </Link>
@@ -151,19 +153,22 @@ const Navbar = () => {
             <div className="flex gap-1">
               <Link
                 to="/login"
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#439A97] md:bg-[#439A97] text-white md:text-white"
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#6B8A7A] md:bg-[#6B8A7A] text-[#F6F4F0] md:text-[#F6F4F0]"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#439A97] md:bg-[#439A97] text-white md:text-white "
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#6B8A7A] md:bg-[#6B8A7A] text-[#F6F4F0] md:text-[#F6F4F0] "
               >
                 Register
               </Link>
             </div>
           )}
-          <div className="text-2xl text-[#439A97] lg:text-6xl p-2" onClick={handleTheme}>
+          <div
+            className="text-2xl text-[#6B8A7A] lg:text-6xl p-2"
+            onClick={handleTheme}
+          >
             {theme !== "light" ? <FaToggleOn /> : <FaToggleOff />}
           </div>
         </div>

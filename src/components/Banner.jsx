@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import Lottie from "lottie-react";
 const Banner = () => {
   return (
-    <div className="z-10 text-[#EFE1D1]">
+    <div className="z-10 ">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -23,7 +23,7 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper "
       >
         <SwiperSlide>
           <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner ">
@@ -36,9 +36,14 @@ const Banner = () => {
                 subjects. Unlock your potential with personalized one-on-one
                 sessions designed just for you!
               </p>
-              <button className="p-1 px-6 md:py-3  text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
-                Explore
-              </button>
+              <div className="pt-5">
+                <a
+                  href="#contact"
+                  className="p-1 px-6 md:py-3 bg-[#254336] transition-shadow text-white shadow-lg hover:shadow-xl"
+                >
+                  Contact Now
+                </a>
+              </div>
             </div>
             <div className="md:w-3/5">
               <Lottie
@@ -63,9 +68,14 @@ const Banner = () => {
                 around the world and enjoy seamless online sessions tailored to
                 your goals.
               </p>
-              <button className="p-1 px-6 md:py-3  text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
-                Explore
-              </button>
+              <div className="pt-5">
+                <a
+                  href="#contact"
+                  className="p-1 px-6 md:py-3 bg-[#254336] transition-shadow text-white shadow-lg hover:shadow-xl"
+                >
+                  Contact Now
+                </a>
+              </div>
             </div>
             <div className="md:w-3/5">
               <Lottie
@@ -86,9 +96,14 @@ const Banner = () => {
                 Whether you're learning a new language or mastering a subject,
                 our expert tutors are here to guide you every step of the way.
               </p>
-              <button className="p-1 px-6 md:py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 text-sm hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
-                Explore
-              </button>
+              <div className="pt-5">
+                <a
+                  href="#contact"
+                  className="p-1 px-6 md:py-3 bg-[#254336] transition-shadow text-white shadow-lg hover:shadow-xl"
+                >
+                  Contact Now
+                </a>
+              </div>
             </div>
             <div className="md:w-3/5">
               <Lottie
@@ -100,7 +115,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         {/* <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col-reverse items-center md:gap-10    bg-gradient-to-r from-[#CB9DF0] via-[#FFF] to-[#BFF6C3] banner">
+          <div className=" flex py-2 md:py-0 md:flex-row flex-col-reverse items-center md:gap-10    bg-gradient-to-r from-[#CB9DF0] via-[#FFF] to-[#BFF6C3] banner">
             <div className="p-2  md:w-2/5   space-y-4">
               <h1 className="text-2xl lg:text-4xl font-bold">
                 Train Like a Pro!
@@ -109,9 +124,9 @@ const Banner = () => {
                 Professional-grade equipment to take your training to the next
                 level.
               </p>
-              <button className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
+              <a className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
                 Explore
-              </button>
+              </a>
             </div>
           </div>
         </SwiperSlide>
@@ -124,9 +139,9 @@ const Banner = () => {
               <p className="text-xl">
                 Up to 50% off on select sports gear. Limited Time Only!
               </p>
-              <button className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
+              <a className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-shadow shadow-lg hover:shadow-xl">
                 Explore
-              </button>
+              </a>
             </div>
           </div>
         </SwiperSlide> */}
