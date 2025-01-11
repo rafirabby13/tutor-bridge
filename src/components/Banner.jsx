@@ -26,7 +26,7 @@ const Banner = () => {
         className="mySwiper "
       >
         <SwiperSlide>
-          <div className="md:px-10  lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-4   banner ">
+          <div className="md:px-10  lg:px-24 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-4   banner ">
             <div className=" p-2  md:w-2/5  space-y-4 ">
               <h1 className=" md:text-xl lg:text-4xl font-bold">
                 Find Your Perfect Tutor
@@ -55,7 +55,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:px-10  lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10    banner">
+          <div className="md:px-10  lg:px-24 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10    banner">
             <div
               className="p-2 md:pr-12 md:w-2/5  
                space-y-4"
@@ -87,7 +87,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:px-10  lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner">
+          <div className="md:px-10  lg:px-24 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner">
             <div className="p-2 md:pr-12 md:w-2/5   space-y-4">
               <h1 className=" md:text-xl lg:text-4xl font-bold">
                 Your Learning Journey Starts Here

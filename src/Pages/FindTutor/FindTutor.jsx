@@ -10,6 +10,7 @@ import Loading from "../../components/Loading.jsx";
 const FindTutor = () => {
   // const [tutors, setTutors] = useState([]);
   const [search, setSearch] = useState("");
+  
 
   const { tutors, setTutors, loading, setLoading } = useContext(AuthContext);
 
@@ -29,7 +30,9 @@ const FindTutor = () => {
         `https://tutor-bridge-server.vercel.app/search?q=${search}`
       )
       .then((res) => {
+        console.log(res.data);
         setTutors(res.data);
+        
         setLoading(false);
       });
   }, [search, setTutors, setLoading]);
@@ -46,7 +49,7 @@ const FindTutor = () => {
   //     form.reset()
   //   })
   // };
-
+ 
   return (
     <div className="min-h-screen py-10">
       <Helmet>
@@ -55,6 +58,7 @@ const FindTutor = () => {
       <h1 className="text-xl md:text-4xl font-bold  mb-4 p-2 md:p-6 shadow-md shadow-blue-400 history">
         FindTutor
       </h1>
+    
 
       <form className="py-10  w-fit mx-auto flex gap-3">
         <label className="input input-bordered flex items-center gap-2 feedback md:text-2xl md:p-8 bg-[#254336] text-white">
@@ -91,7 +95,7 @@ const FindTutor = () => {
       {loading ? (
         <Loading />
       ) : ( //grid md:grid-cols-3 lg:grid-cols-4
-        <div className=" grid md:grid-cols-3 lg:grid-cols-4  gap-5">
+        <div className=" grid md:grid-cols-3 lg:grid-cols-4  gap-1 xl:gap-5">
           {tutors.map((tutor, i) => (
             <FindTutorCard key={i} tutor={tutor}></FindTutorCard>
           ))}
