@@ -14,7 +14,7 @@ const FindTutor = () => {
   const { tutors, setTutors, loading, setLoading } = useContext(AuthContext);
 
   // useEffect(() => {
-  //   fetch("https://online-tutor-booking-platform-server.vercel.app/findTutor")
+  //   fetch("https://tutor-bridge-server.vercel.app/findTutor")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       // console.log(data);
@@ -26,7 +26,7 @@ const FindTutor = () => {
     setLoading(true);
     axios
       .get(
-        `https://online-tutor-booking-platform-server.vercel.app/search?q=${search}`
+        `https://tutor-bridge-server.vercel.app/search?q=${search}`
       )
       .then((res) => {
         setTutors(res.data);
@@ -40,7 +40,7 @@ const FindTutor = () => {
   //   const search= form.search.value;
 
   //   console.log(search);
-  //   axios.get(`https://online-tutor-booking-platform-server.vercel.app/search?q=${search}`)
+  //   axios.get(`https://tutor-bridge-server.vercel.app/search?q=${search}`)
   //   .then(res=>{
   //     setTutors(res.data);
   //     form.reset()
@@ -90,8 +90,8 @@ const FindTutor = () => {
 
       {loading ? (
         <Loading />
-      ) : (
-        <div className="grid md:grid-cols-3 gap-6">
+      ) : ( //grid md:grid-cols-3 lg:grid-cols-4
+        <div className=" grid md:grid-cols-3 lg:grid-cols-4  gap-5">
           {tutors.map((tutor, i) => (
             <FindTutorCard key={i} tutor={tutor}></FindTutorCard>
           ))}

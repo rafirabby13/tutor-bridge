@@ -101,10 +101,10 @@ const Login = () => {
           </form>
           <div className="divider divider-[#254336]">OR</div>
           <div onClick={handleGoogleLogin} className="form-control mt-6 login">
-              <button className="p-2 md:p-4 px-10 bg-[#254336] text-white md:text-xl flex items-center justify-center gap-4 mb-10 w-fit mx-auto">
-             <FaGoogle /> Sign In With Google
-              </button>
-            </div>
+            <button className="p-2 md:p-4 px-10 bg-[#254336] text-white md:text-xl flex items-center justify-center gap-4 mb-10 w-fit mx-auto">
+              <FaGoogle /> Sign In With Google
+            </button>
+          </div>
           {/* <div className="text-center w-full">
             <button
               className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#254336] shadow-red-400 shadow-sm text-white"

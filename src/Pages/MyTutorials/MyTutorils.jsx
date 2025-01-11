@@ -11,19 +11,18 @@ const MyTutorils = () => {
   const { user, tutors, setTutors } = useContext(AuthContext);
   const [tutorials, setTutorials] = useState([]);
 
-  const axiosSecure = useAxios()
+  const axiosSecure = useAxios();
 
   //   const myTutorials = useLoaderData()
   //   console.log(myTutorials);
 
   useEffect(() => {
-    axiosSecure.get(`/tutorr?email=${user?.email}`)
-    .then((res) => {
+    axiosSecure.get(`/tutorr?email=${user?.email}`).then((res) => {
       // console.log(data);
       setTutorials(res.data);
     });
 
-    // axios.get(`https://online-tutor-booking-platform-server.vercel.app/tutorr?email=${user?.email}`, {
+    // axios.get(`https://tutor-bridge-server.vercel.app/tutorr?email=${user?.email}`, {
     //   withCredentials: true
     // })
     // .then((res) => {
@@ -31,7 +30,7 @@ const MyTutorils = () => {
     //   setTutorials(res.data);
     // });
 
-    // fetch(`https://online-tutor-booking-platform-server.vercel.app/tutorr?email=${user?.email}`)
+    // fetch(`https://tutor-bridge-server.vercel.app/tutorr?email=${user?.email}`)
     //   .then((res) => res.json())
     //   .then((data) => {
     //     // console.log(data);
@@ -47,10 +46,10 @@ const MyTutorils = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://online-tutor-booking-platform-server.vercel.app/tutorials/${id}`, {
+        fetch(`https://tutor-bridge-server.vercel.app/tutorials/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -67,25 +66,21 @@ const MyTutorils = () => {
             console.log(err);
           });
 
-
         Swal.fire({
           title: "Deleted!",
           text: "Your file has been deleted.",
-          icon: "success"
+          icon: "success",
         });
       }
     });
     // console.log(id);
-   
   };
 
   return (
     <div className="min-h-screen py-20">
       <Helmet>
-                
-                <title>My Tutorials | Tutor Bridge</title>
-                
-            </Helmet>
+        <title>My Tutorials | Tutor Bridge</title>
+      </Helmet>
       <div className="overflow-x-auto w-full p-5">
         <table className="table w-full border border-gray-200">
           {/* Table Head */}
@@ -121,11 +116,17 @@ const MyTutorils = () => {
                 </td>
                 <td className="p-3">{tutorial.language}</td>
                 <td className="p-3">${tutorial.price}</td>
-                <td className="p-3">{tutorial.description}</td>
+                <td className="p-3">
+                  {tutorial.description.length > 30
+                    ? `${tutorial.description.slice(0, 30)}...`
+                    : tutorial.description}
+                </td>
                 <td className="p-3">{tutorial.review}</td>
                 <td className="p-3 flex gap-2">
                   <Link to={`/update/${tutorial._id}`}>
-                    <button className="btn bg-[#254336] text-[#EEEEEE] btn-sm">Update</button>
+                    <button className="btn bg-[#254336] text-[#EEEEEE] btn-sm">
+                      Update
+                    </button>
                   </Link>
                   <button
                     onClick={() => handleDelete(tutorial._id)}

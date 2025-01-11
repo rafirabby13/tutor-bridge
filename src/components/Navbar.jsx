@@ -35,42 +35,48 @@ const Navbar = () => {
           Find Tutors
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
-              : "font-bold"
-          }
-          to="/addTutorials"
-        >
-          Add Tutorials
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
-              : "font-bold"
-          }
-          to="/myTutorials"
-        >
-          My Tutorials
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
-              : "font-bold"
-          }
-          to="/myBookedTutor"
-        >
-          My booked Tutors
-        </NavLink>
-      </li>
+      {user ? (
+        <>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+                  : "font-bold"
+              }
+              to="/addTutorials"
+            >
+              Add Tutorials
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+                  : "font-bold"
+              }
+              to="/myTutorials"
+            >
+              My Tutorials
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+                  : "font-bold"
+              }
+              to="/myBookedTutor"
+            >
+              My booked Tutors
+            </NavLink>
+          </li>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 
@@ -125,7 +131,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal font-semibold flex items-center  xl:text-xl px-1">
+          <ul className="menu menu-horizontal font-semibold flex items-center  2xl:text-xl px-1">
             {items}
           </ul>
         </div>

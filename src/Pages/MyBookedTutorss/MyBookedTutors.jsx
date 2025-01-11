@@ -17,7 +17,7 @@ const MyBookedTutors = () => {
   useEffect(() => {
     axiosSecure
       .get(`/bookedTutorials?loggedInUserEmail=${user?.email}`)
-      // axios.get('https://online-tutor-booking-platform-server.vercel.app/bookedTutorials', {
+      // axios.get('https://tutor-bridge-server.vercel.app/bookedTutorials', {
       //     withCredentials: true
       // })
       .then((res) => {
@@ -25,19 +25,19 @@ const MyBookedTutors = () => {
         setBooking(true);
       });
 
-    // fetch('https://online-tutor-booking-platform-server.vercel.app/bookedTutorials')
+    // fetch('https://tutor-bridge-server.vercel.app/bookedTutorials')
     // .then(res=> res.json())
     // .then(data=>{
     //     setBookedTutors(data)
     // })
   }, [user?.email, booking]);
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen py-20 ">
       <Helmet>
         <title>Booked Tutors | Tutor Bridge</title>
       </Helmet>
       {bookedTutors?.length > 0 ? (
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
           {bookedTutors?.map((booked, i) => (
             <MyBookedCard key={i} booked={booked}></MyBookedCard>
           ))}

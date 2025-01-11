@@ -15,7 +15,7 @@ const FindTutorCategory = () => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://online-tutor-booking-platform-server.vercel.app/tutor/category/${category}`
+      `https://tutor-bridge-server.vercel.app/tutor/category/${category}`
     )
       .then((res) => res.json())
       .then((data) => {

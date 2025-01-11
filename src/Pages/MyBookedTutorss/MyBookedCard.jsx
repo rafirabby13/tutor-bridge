@@ -27,7 +27,7 @@ const MyBookedCard = ({ booked }) => {
     console.log(typeof review);
 
     axios
-      .patch(`https://online-tutor-booking-platform-server.vercel.app/tutor/${tutorId}`)
+      .patch(`https://tutor-bridge-server.vercel.app/tutor/${tutorId}`)
       .then((res) => {
         console.log(res.data);
         setBooking(false);
@@ -44,31 +44,31 @@ const MyBookedCard = ({ booked }) => {
   };
 
   return (
-    <div className="  ">
+    <div className=" ">
       <div>
-        <div className=" mx-auto feedback  rounded-lg shadow-lg overflow-hidden p-5 flex flex-col justify-between h-full">
+        <div className=" mx-auto feedback  rounded-lg shadow-lg overflow-hidden  flex flex-col justify-between h-full">
           {/* Image Section */}
           <img
-            className="w-full h-32 md:h-64"
+            className="w-full h-32 md:h-40"
             src={photo || "https://via.placeholder.com/300"}
             alt={name || "Tutor"}
             loading="lazy"
           />
 
           {/* Card Content */}
-          <div className="p-5">
-            <h2 className="text-lg font-semibold ">{name? name : "Tutor"}</h2>
+          <div className="p-4">
+            <h2 className="text-2xl font-semibold ">{name? name : "Tutor"}</h2>
 
-            <p className="text-sm  mt-2">
+            <p className="text-xl  mt-2">
               Language:{" "}
               <span className=" font-medium">{language || "N/A"}</span>
             </p>
 
-            <p className="text-sm  mt-2">
+            <p className="text-xl  mt-2">
               Price: <span className=" font-medium">${price || "-"}</span>
             </p>
 
-            <p className="text-sm  mt-2">
+            <p className="text-xl  mt-2">
               Reviews: <span className=" font-medium">{review || 0}</span>
             </p>
 

@@ -23,7 +23,7 @@ const TutorDetails = () => {
   }, [details, axiosSecure]);
   const { name, email, _id, review, price, language, description, photo } =
     tutor;
-
+  console.log(tutor);
   const handleTutorDetail = () => {
     // const reviews = Number(review);
     const tutorInfo = {
@@ -44,110 +44,61 @@ const TutorDetails = () => {
     });
     axiosSecure
       .post(
-        "https://online-tutor-booking-platform-server.vercel.app/bookTutorials",
+        "https://tutor-bridge-server.vercel.app/bookTutorials",
         tutorInfo
       )
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         navigate("/");
       });
   };
 
   return (
-    // <div className="min-h-screen py-20">
-    //   <div className="flex feedback flex-col border border-gray-300 rounded-xl shadow-lg w-full max-w-lg  overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 ">
-    //     {/* Header Section */}
-    //     <div className="flex items-center px-6 py-4 ">
-    //       <img
-    //         src={photo || "https://via.placeholder.com/150"}
-    //         alt={name || "Tutor"}
-    //         className="w-28 h-28 p-2 rounded-full  border-4 border-pink-400"
-    //       />
-    //       <div className="ml-5">
-    //         <h3 className="text-2xl font-bold ">{name || "Unknown Tutor"}</h3>
-    //         <p className="text-xl ">{language || "Languages not specified"}</p>
-    //       </div>
-    //     </div>
-
-    //     {/* Content Section */}
-    //     <div className="px-6 py-4">
-    //       <div className="flex items-center justify-between">
-    //         <div className="flex items-center space-x-1">
-    //           <span className="text-yellow-400 text-xl">⭐</span>
-    //           <span className=" text-xl font-medium">
-    //             ({review || 0} reviews)
-    //           </span>
-    //         </div>
-    //         <div className="text-2xl font-semibold text-pink-500">
-    //           ${price || 0}/hr
-    //         </div>
-    //       </div>
-    //       <p className="mt-4 text-xl  line-clamp-3">
-    //         {description || "No description available."}
-    //       </p>
-    //     </div>
-
-    //     {/* Footer Section */}
-    //     <div className="px-6 py-4 flex justify-between items-center border-t border-gray-200">
-    //       <button
-    //         onClick={handleTutorDetail}
-    //         to={`/tutor/${_id}`}
-    //         className="bg-pink-500 text-xl text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-600 transition-all"
-    //       >
-    //         Book Now
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="min-h-screen py-20 flex justify-center">
-    <div className="flex flex-col border border-gray-300 rounded-3xl shadow-xl w-full max-w-lg overflow-hidden hover:shadow-2xl transition-transform duration-300 transform hover:scale-105 bg-gradient-to-b from-white via-[#EAFDFC] to-[#C8F4F9] detailCard">
-      {/* Header Section */}
-      <div className="flex items-center px-6 py-6 bg-gradient-to-r from-[#439A97] to-[#62B6B7] text-white rounded-t-3xl">
-        <img
-          src={photo || "https://via.placeholder.com/150"}
-          alt={name || "Tutor"}
-          className="w-32 h-32 p-2 rounded-full border-4 border-white shadow-lg"
-        />
-        <div className="ml-5">
-          <h3 className="text-2xl font-extrabold">{name || "Unknown Tutor"}</h3>
-          <p className="text-lg font-light italic">
-            {language || "Languages not specified"}
-          </p>
+    <div className=" py-20 flex   justify-center gap-8">
+      <div className="flex flex-col md:flex-row  shadow-xl w-full  bg-[#6B8A7A]">
+        <div className="flex items-center  rounded-t-3xl md:w-1/2">
+          <img
+            src={photo || "https://via.placeholder.com/150"}
+            alt={name || "Tutor"}
+            className="h-full w-full   shadow-lg"
+          />
         </div>
-      </div>
-  
-      {/* Content Section */}
-      <div className="px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="p-3 md:p-10 space-y-4 text-[#DAD3BE] md:w-1/2">
+          <div className="">
+            <h3 className="text-4xl font-extrabold">
+              {name || "Unknown Tutor"}
+            </h3>
+            <p className="text-2xl font-light italic ">
+              {language || "Languages not specified"}
+            </p>
+          </div>
+
           <div className="flex items-center space-x-2">
             <span className="text-yellow-400 text-2xl">⭐</span>
-            <span className="text-lg font-medium text-gray-600">
-              ({review || 0} reviews)
+            <span className="text-2xl font-medium text-[#DAD3BE]">
+              {review || 0} reviews
             </span>
           </div>
-          <div className="text-2xl font-bold text-[#439A97]">
-            ${price || 0}/hr
+          <div className="text-2xl font-bold text-[#DAD3BE]">
+            Price: ${price || 0}/hr
+          </div>
+
+          <p className=" text-[#DAD3BE] ">
+            {description || "No description available."}
+          </p>
+
+          <div className=" flex justify-between items-center ">
+            <button
+              onClick={handleTutorDetail}
+              to={`/tutor/${_id}`}
+              className="bg-[#254336] text-[#DAD3BE] text-lg font-bold px-6 py-3 rounded-lg shadow-md hover:bg-[#6B8A7A] hover:shadow-lg transition-all"
+            >
+              Book Now
+            </button>
           </div>
         </div>
-        <p className="mt-4 text-gray-700 text-base leading-relaxed line-clamp-3">
-          {description || "No description available."}
-        </p>
-      </div>
-  
-      {/* Footer Section */}
-      <div className="px-6 py-4 flex justify-between items-center border-t border-gray-300 ">
-        <button
-          onClick={handleTutorDetail}
-          to={`/tutor/${_id}`}
-          className="bg-[#439A97] text-white text-lg font-bold px-6 py-3 rounded-lg shadow-md hover:bg-[#62B6B7] hover:shadow-lg transition-all"
-        >
-          Book Now
-        </button>
       </div>
     </div>
-  </div>
-  
-
   );
 };
 

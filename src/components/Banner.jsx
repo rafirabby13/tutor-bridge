@@ -26,12 +26,12 @@ const Banner = () => {
         className="mySwiper "
       >
         <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner ">
+          <div className="md:px-10  lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-4   banner ">
             <div className=" p-2  md:w-2/5  space-y-4 ">
-              <h1 className=" md:text-2xl lg:text-4xl font-bold">
+              <h1 className=" md:text-xl lg:text-4xl font-bold">
                 Find Your Perfect Tutor
               </h1>
-              <p className="md:text-xl text-sm">
+              <p className="md:text-md text-sm">
                 Connect with experienced tutors across various languages and
                 subjects. Unlock your potential with personalized one-on-one
                 sessions designed just for you!
@@ -45,9 +45,9 @@ const Banner = () => {
                 </a>
               </div>
             </div>
-            <div className="md:w-3/5">
+            <div className="lg:w-3/5">
               <Lottie
-                className="h-[200px]  md:h-[600px]"
+                className="h-[200px]  md:h-[450px] lg:h-[370px]"
                 animationData={a1}
                 loop={true}
               />
@@ -55,15 +55,15 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10    banner">
+          <div className="md:px-10  lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10    banner">
             <div
               className="p-2 md:pr-12 md:w-2/5  
                space-y-4"
             >
-              <h1 className=" md:text-2xl lg:text-4xl font-bold">
+              <h1 className=" md:text-xl lg:text-4xl font-bold">
                 Flexible Scheduling, Global Reach
               </h1>
-              <p className="md:text-xl text-sm">
+              <p className="md:text-md text-sm">
                 Learn at your own pace, on your schedule. Access tutors from
                 around the world and enjoy seamless online sessions tailored to
                 your goals.
@@ -77,9 +77,9 @@ const Banner = () => {
                 </a>
               </div>
             </div>
-            <div className="md:w-3/5">
+            <div className="lg:w-3/5">
               <Lottie
-                className="h-[200px]  md:h-[600px]"
+                className="h-[200px]  md:h-[450px] lg:h-[370px]"
                 animationData={a2}
                 loop={true}
               />
@@ -87,12 +87,12 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner">
+          <div className="md:px-10  lg:px-20 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-10   banner">
             <div className="p-2 md:pr-12 md:w-2/5   space-y-4">
-              <h1 className=" md:text-2xl lg:text-4xl font-bold">
+              <h1 className=" md:text-xl lg:text-4xl font-bold">
                 Your Learning Journey Starts Here
               </h1>
-              <p className="md:text-xl text-sm">
+              <p className="md:text-md text-sm">
                 Whether you're learning a new language or mastering a subject,
                 our expert tutors are here to guide you every step of the way.
               </p>
@@ -105,9 +105,9 @@ const Banner = () => {
                 </a>
               </div>
             </div>
-            <div className="md:w-3/5">
+            <div className=" md:w-3/5">
               <Lottie
-                className="h-[200px]  md:h-[600px]"
+                className="h-[200px]  md:h-[450px] lg:h-[370px]"
                 animationData={a3}
                 loop={true}
               />

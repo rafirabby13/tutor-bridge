@@ -30,13 +30,13 @@ export const router = createBrowserRouter([
         {
           path: '/find-tutors/:category',
           element: <FindTutorCategory/>,
-          // loader: ({params})=> fetch(`https://online-tutor-booking-platform-server.vercel.app/tutor/category/${params.category}`)
+          // loader: ({params})=> fetch(`https://tutor-bridge-server.vercel.app/tutor/category/${params.category}`)
 
         },
         {
           path: '/tutor/:details',
-          element: <PrivateRoute><TutorDetails/></PrivateRoute>,
-          // loader: ({params})=> fetch(`https://online-tutor-booking-platform-server.vercel.app/tutor/${params.details}`)
+          element: <TutorDetails/>,
+          // loader: ({params})=> fetch(`https://tutor-bridge-server.vercel.app/tutor/${params.details}`)
         },
         {
           path: '/login',
@@ -57,12 +57,12 @@ export const router = createBrowserRouter([
         {
           path: '/myTutorials',
           element: <PrivateRoute><MyTutorils/></PrivateRoute>,
-          loader: ()=>fetch("https://online-tutor-booking-platform-server.vercel.app/findTutor")
+          loader: ()=>fetch("https://tutor-bridge-server.vercel.app/findTutor")
         },
         {
           path: '/update/:id',
-          element: <UpdateTutorial/>,
-          loader: ({params})=>fetch(`https://online-tutor-booking-platform-server.vercel.app/updateTutorials/${params.id}`)
+          element: <PrivateRoute><UpdateTutorial/></PrivateRoute>,
+          loader: ({params})=>fetch(`https://tutor-bridge-server.vercel.app/updateTutorials/${params.id}`)
         }
       ]
     },

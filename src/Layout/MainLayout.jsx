@@ -18,14 +18,14 @@ const MainLayout = () => {
       </section>
       <section className="h-16 lg:h-[156px]"></section>
       {location.pathname == "/" ? (
-        <section className="mb-40">
+        <section className="mb-28">
           <Banner></Banner>
         </section>
       ) : (
         ""
       )}
 
-      <section className="md:max-w-[85%] mx-auto space-y-40">
+      <section className="md:max-w-[85%] mx-auto space-y-28">
         <Outlet />
       </section>
       <Footer />

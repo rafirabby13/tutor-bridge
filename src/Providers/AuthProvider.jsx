@@ -64,14 +64,14 @@ const AuthProvider = ({ children }) => {
         const user = { email: currentUser.email };
 
         axios
-          .post("https://online-tutor-booking-platform-server.vercel.app/jwt", user, { withCredentials: true })
+          .post("https://tutor-bridge-server.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
             console.log(res.data);
             setLoading(false);
           });
       } else {
         axios
-          .post("https://online-tutor-booking-platform-server.vercel.app/logout", {}, { withCredentials: true })
+          .post("https://tutor-bridge-server.vercel.app/logout", {}, { withCredentials: true })
           .then((res) => {
             console.log(res.data);
             setLoading(false);

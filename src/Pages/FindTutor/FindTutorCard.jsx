@@ -7,8 +7,8 @@ const FindTutorCard = ({ tutor }) => {
   // console.log(tutor);
   const { name, _id, price, language, description, review, photo } = tutor;
   return (
-    <div className="flex findTutor flex-col border border-gray-200 p-4 rounded-lg shadow-md w-full  feedback overflow-hidden">
-      <div className="flex items-center px-4 py-3">
+    <div className="flex findTutor flex-col justify-between border border-gray-200 p-2 rounded-lg shadow-md w-full  feedback overflow-hidden ">
+      <div className="flex items-center py-3">
         <img
           src={photo}
           alt={name}
@@ -20,7 +20,7 @@ const FindTutorCard = ({ tutor }) => {
         </div>
       </div>
 
-      <div className="px-4">
+      <div className="">
         <div className="flex items-center justify-between">
           <span className="text-2xl font-semibold ">${price}/hr</span>
           <span className=" text-xl">{review > 0 ? review : "0"} Reviews</span>
@@ -28,7 +28,7 @@ const FindTutorCard = ({ tutor }) => {
         <p className="mt-2 text-xl  line-clamp-2">{description}</p>
       </div>
 
-      <div className="px-4 py-3 flex justify-between items-center">
+      <div className=" py-3 flex justify-between items-center">
         <Link
           to={`/tutor/${_id}`}
           className="btn bg-[#254336] text-white  font-medium hover:bg-[#254336af] border-none text-lg  shadow-lg"

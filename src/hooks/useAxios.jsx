@@ -4,7 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { useNavigate } from "react-router-dom";
 
 const axiosInstance = axios.create({
-  baseURL: "https://online-tutor-booking-platform-server.vercel.app",
+  baseURL: "https://tutor-bridge-server.vercel.app",
   withCredentials: true,
 });
 
