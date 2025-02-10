@@ -13,7 +13,7 @@ const Home = () => {
       <Helmet>
         <title>Home | Tutor Bridge</title>
       </Helmet>
-     
+
       <section className="space-y-40">
         <Stats></Stats>
         <Language></Language>

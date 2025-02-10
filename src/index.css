@@ -112,7 +112,7 @@ a.active {
   color: #EDEAE0;
 }
 .langCard {
-  background: linear-gradient(to bottom, #6B8A7A, #6B8A7A);
+  background: #6B8A7A;
   color: #EDEAE0;
   background-position: center;
   background-repeat: no-repeat;
