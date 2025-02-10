@@ -82,7 +82,7 @@ const MyTutorils = () => {
         <title>My Tutorials | Tutor Bridge</title>
       </Helmet>
       <div className="overflow-x-auto w-full p-5">
-        <table className="table w-full border border-gray-200">
+        <table className="table w-full border border-gray-200 table-zebra">
           {/* Table Head */}
           <thead>
             <tr className="bg-gray-100">
