@@ -12,7 +12,7 @@ const LanguageCard = ({ lnguage }) => {
   const category= cat.toLowerCase()
   return (
     <div>
-      <Link to={`/find-tutors/${category}`} className="flex items-center shadow-xl border-2 p-2 md:p-6 justify-between gap-2 language langCard">
+      <Link to={`/find-tutors/${category}`} className="flex items-center shadow-xl p-2 md:p-6 justify-between gap-2 language langCard">
       <div>
         <img src={img} className="h-12 w-12 md:h-24 md:w-24" alt="" />
       </div>

@@ -7,7 +7,7 @@ const FindTutorCard = ({ tutor }) => {
   // console.log(tutor);
   const { name, _id, price, language, description, review, photo } = tutor;
   return (
-    <div className="flex findTutor flex-col justify-between border border-gray-200 p-2 rounded-lg shadow-md w-full  feedback overflow-hidden ">
+    <div className="flex findTutor flex-col justify-between  p-2 rounded-lg shadow-md w-full  feedback overflow-hidden ">
       <div className="flex items-center py-3">
         <img
           src={photo}

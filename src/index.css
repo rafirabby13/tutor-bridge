@@ -112,11 +112,13 @@ a.active {
   color: #EDEAE0;
 }
 .langCard {
-  background: #450d34;
+  background: #6B8A7A;
   color: #EDEAE0;
+  /* border: 2px solid #439a97e6; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 2px 12px 11px 2px #254336;
 }
 .his {
   background: linear-gradient(to right, #6B8A7A, #6B8A7A);
@@ -124,6 +126,8 @@ a.active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 12px 12px 11px 2px #254336;
+
 }
 #light .feedCard {
   background: linear-gradient(to right, #6B8A7A, #6B8A7A);
@@ -143,6 +147,7 @@ a.active {
   background: linear-gradient(to left, #6B8A7A, #6B8A7A);
   background-position: center;
   color: #EDEAE0;
+  box-shadow: 12px 12px 11px 2px #254336;
 
   background-repeat: no-repeat;
   background-size: cover;
