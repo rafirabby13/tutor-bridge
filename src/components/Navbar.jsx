@@ -16,7 +16,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+              ? "bg-[#8aae9b] font-bold text-[#F6F4F0] lg:text-lg"
               : "font-bold"
           }
         >
