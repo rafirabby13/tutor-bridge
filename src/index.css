@@ -104,21 +104,32 @@ a.active {
 }
 
 .tsaCard {
-  background: linear-gradient(to bottom, #6b8a7ae6, rgba(0, 0, 0, 0.746)),
-    url("../src//assets/bg.jpg");
+  background: linear-gradient(to left, #254336d4, #254336cf),
+    url("../src//assets/books-7838952_1280.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #EDEAE0;
+  box-shadow: 2px 12px 11px 2px #022c16;
+
 }
 .langCard {
   background: #6B8A7A;
+  background: #254336;
   color: #EDEAE0;
   /* border: 2px solid #439a97e6; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 2px 12px 11px 2px #6B8A7A;
+
+}
+
+.langCard:hover{
+  background: #6B8A7A;
+
   box-shadow: 2px 12px 11px 2px #254336;
+
 }
 .his {
   background: linear-gradient(to right, #6B8A7A, #6B8A7A);
