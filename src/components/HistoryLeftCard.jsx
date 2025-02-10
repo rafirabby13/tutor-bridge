@@ -58,7 +58,7 @@ const HistoryLeftCard = ({ history }) => {
             }}
             src={image}
             alt={title}
-            className="w-full h-40 md:h-80 mt-6 rounded-lg shadow-md overflow-hidden object-cover object-center"
+            className="w-full h-40 md:h-80 mt-6 rounded-lg shadow-md overflow-hidden "
           />
         </div>
       </div>
