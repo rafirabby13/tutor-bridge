@@ -39,7 +39,7 @@ const Banner = () => {
               <div className="pt-5">
                 <a
                   href="#contact"
-                  className="p-1 px-6 md:py-3 bg-[#254336] transition-shadow text-white shadow-lg hover:shadow-xl"
+                  className="btn border-none  bg-[#254336] transition-shadow text-white shadow-lg shadow-[#2e542b] hover:shadow-xl"
                 >
                   Contact Now
                 </a>
@@ -71,7 +71,7 @@ const Banner = () => {
               <div className="pt-5">
                 <a
                   href="#contact"
-                  className="p-1 px-6 md:py-3 bg-[#254336] transition-shadow text-white shadow-lg hover:shadow-xl"
+                  className="btn border-none  bg-[#254336] transition-shadow text-white shadow-lg shadow-[#2e542b] hover:shadow-xl"
                 >
                   Contact Now
                 </a>
@@ -99,7 +99,7 @@ const Banner = () => {
               <div className="pt-5">
                 <a
                   href="#contact"
-                  className="p-1 px-6 md:py-3 bg-[#254336] transition-shadow text-white shadow-lg hover:shadow-xl"
+                  className="btn border-none  bg-[#254336] transition-shadow text-white shadow-lg shadow-[#2e542b] hover:shadow-xl"
                 >
                   Contact Now
                 </a>
