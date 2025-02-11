@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import a1 from "../assets/Animation - 1735188939390.json";
-import a2 from "../assets/Animation - 1735189026676.json";
+import a2 from "../assets/Animation - 1739298065024.json";
 import a3 from "../assets/Animation - 1735189162111.json";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
