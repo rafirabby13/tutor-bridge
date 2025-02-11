@@ -16,7 +16,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#8aae9b] font-bold text-[#F6F4F0] lg:text-lg"
+              ? "bg-[#E9EFEC] font-bold text-[#16423C] lg:text-lg"
               : "font-bold"
           }
         >
@@ -27,7 +27,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+              ? "bg-[#E9EFEC] font-bold text-[#16423C] lg:text-lg"
               : "font-bold"
           }
           to="/find-tutors"
@@ -41,7 +41,7 @@ const Navbar = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+                  ? "bg-[#E9EFEC] font-bold text-[#16423C] lg:text-lg"
                   : "font-bold"
               }
               to="/addTutorials"
@@ -53,7 +53,7 @@ const Navbar = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+                  ? "bg-[#E9EFEC] font-bold text-[#16423C] lg:text-lg"
                   : "font-bold"
               }
               to="/myTutorials"
@@ -65,7 +65,7 @@ const Navbar = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "bg-[#6B8A7A] font-bold text-[#F6F4F0] lg:text-lg"
+                  ? "bg-[#E9EFEC] font-bold text-[#16423C] lg:text-lg"
                   : "font-bold"
               }
               to="/myBookedTutor"
@@ -121,7 +121,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content text-[#F6F4F0] bg-green-950 rounded-box z-50 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content text-[#16423C] bg-green-950 rounded-box z-50 mt-3 w-52 p-2 shadow"
             >
               {items}
             </ul>
@@ -142,15 +142,15 @@ const Navbar = () => {
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user?.displayName}
                 data-tooltip-variant="dark"
-                className="xl:h-16 xl:w-16 h-10 w-10  rounded-full p-1 lg:p-0 xl:p-1 border-2 lg:border-[6px] z-20 border-[#6B8A7A]"
+                className="xl:h-16 xl:w-16 h-10 w-10  rounded-full p-1 lg:p-0 xl:p-1 border-[2px] lg:border-[2px] z-20 border-[#E9EFEC]"
                 src={user?.photoURL}
                 alt=""
               />
               <Tooltip id="my-tooltip" className="z-50" />
-
+{/* "bg-[#E9EFEC] font-bold text-[#16423C] lg:text-lg" */}
               <Link
                 onClick={handleLogout}
-                className=" border-none p-1 lg:text-xl xl:btn text-sm bg-[#6B8A7A] xl:bg-[#6B8A7A] text-[#F6F4F0] xl:text-[#F6F4F0]"
+                className=" border-none p-1 lg:text-xl xl:btn text-sm bg-[#E9EFEC] xl:bg-[#E9EFEC] text-[#16423C] xl:text-[#16423C]"
               >
                 Logout
               </Link>
@@ -159,20 +159,20 @@ const Navbar = () => {
             <div className="flex gap-1">
               <Link
                 to="/login"
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#6B8A7A] md:bg-[#6B8A7A] text-[#F6F4F0] md:text-[#F6F4F0]"
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#E9EFEC] md:bg-[#E9EFEC] text-[#16423C] md:text-[#16423C]"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#6B8A7A] md:bg-[#6B8A7A] text-[#F6F4F0] md:text-[#F6F4F0] "
+                className=" border-none p-1 lg:text-xl md:btn text-sm bg-[#E9EFEC] md:bg-[#E9EFEC] text-[#16423C] md:text-[#16423C] "
               >
                 Register
               </Link>
             </div>
           )}
           <div
-            className="text-2xl text-[#6B8A7A] lg:text-6xl p-2"
+            className="text-2xl text-[#E9EFEC] lg:text-6xl p-2"
             onClick={handleTheme}
           >
             {theme !== "light" ? <FaToggleOn /> : <FaToggleOff />}
