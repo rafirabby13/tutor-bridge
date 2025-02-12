@@ -11,7 +11,7 @@ const FindTutor = () => {
   // const [tutors, setTutors] = useState([]);
   const [search, setSearch] = useState("");
   
-
+  const [sortOrder, setSortOrder] = useState("asc");
   const { tutors, setTutors, loading, setLoading } = useContext(AuthContext);
 
   // useEffect(() => {
@@ -49,6 +49,15 @@ const FindTutor = () => {
   //     form.reset()
   //   })
   // };
+
+  const handleSorting =()=>{
+    const sortedTutors = [...tutors].sort((a, b) => {
+      return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
+    });
+  
+    setTutors(sortedTutors);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  }
  
   return (
     <div className="min-h-screen py-10">
@@ -60,6 +69,7 @@ const FindTutor = () => {
       </h1>
     
 
+      <div className="flex flex-col md:flex-row items-center justify-between py-10">
       <form className="py-10  w-fit mx-auto flex gap-3">
         <label className="input input-bordered flex items-center gap-2 feedback md:text-2xl md:p-8 bg-[#254336] text-white">
           <input
@@ -91,6 +101,9 @@ const FindTutor = () => {
           </button>
         </div> */}
       </form>
+
+      <div onClick={handleSorting} className="text-3xl font-bold btn btn-outline ">sort</div>
+      </div>
 
       {loading ? (
         <Loading />
