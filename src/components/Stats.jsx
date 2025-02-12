@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import StatCard from "./StatCard.jsx";
+import Marquee from "react-fast-marquee";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Stats = () => {
   const [stats, setStats] = useState([]);
@@ -25,13 +27,14 @@ const Stats = () => {
           make learning easier and more effective.
         </p>
       </div>
-      
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-between gap-4">
-        {stats.map((stat, i) => (
-          <StatCard key={i} stat={stat}></StatCard>
-        ))}
-      </div>
+      <Slide direction="left" cascade  >
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-between gap-4 ">
+          {stats.map((stat, i) => (
+            <StatCard key={i} stat={stat}></StatCard>
+          ))}
+        </div>
+        </Slide>
     </div>
   );
 };
