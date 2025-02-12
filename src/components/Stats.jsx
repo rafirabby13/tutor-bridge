@@ -25,7 +25,7 @@ const Stats = () => {
           make learning easier and more effective.
         </p>
       </div>
-      p
+      
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-between gap-4">
         {stats.map((stat, i) => (
