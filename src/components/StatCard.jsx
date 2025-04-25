@@ -5,7 +5,7 @@
 const StatCard = ({ stat }) => {
   // console.log(stat);
   const { label, count, IconKey } = stat;
-  console.log(IconKey)
+  // console.log(IconKey)
   return (
  
     <div className="flex flex-col items-center tsaCard  rounded-2xl shadow-md p-6 w-full max-w-xs mx-auto">
