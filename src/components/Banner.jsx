@@ -8,7 +8,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Lottie from "lottie-react";
+import { useEffect, useState } from "react";
+import BannerComponent from "./BannerComponent";
 const Banner = () => {
+
+  const [bannerData,  setBannerData] = useState([])
+  // eslint-disable-next-line no-unused-vars
+  const animationMap = {
+    a1,
+    a2,
+    a3
+  };
+  useEffect(()=>{
+    fetch('/banner.json')
+    .then(res=> res.json())
+    .then(data=>{
+      // console.log(data)
+      setBannerData(data)
+    })
+
+  },[])
+
   return (
     <div className="z-10 ">
       <Swiper
@@ -25,7 +45,19 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper "
       >
-        <SwiperSlide>
+      
+       {
+          bannerData?.map((data,i)=> <SwiperSlide key={i}> <BannerComponent
+          
+          title={data.title}
+          description={data.description}
+          animationData={animationMap[data.animation]}
+
+          ></BannerComponent>  </SwiperSlide>)
+        }
+      
+
+        {/* <SwiperSlide>
           <div className="md:px-10  lg:px-24 flex py-2 md:py-0 md:flex-row flex-col items-center md:gap-4   banner ">
             <div className=" p-2  md:w-2/5  space-y-4 ">
               <h1 className=" md:text-xl lg:text-4xl font-bold">
@@ -114,7 +146,7 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
+        <SwiperSlide>
           <div className=" flex py-2 md:py-0 md:flex-row flex-col-reverse items-center md:gap-10    bg-gradient-to-r from-[#CB9DF0] via-[#FFF] to-[#BFF6C3] banner">
             <div className="p-2  md:w-2/5   space-y-4">
               <h1 className="text-2xl lg:text-4xl font-bold">

@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Find Your Perfect Tutor",
+      "description": "Connect with experienced tutors across various languages and subjects. Unlock your potential with personalized one-on-one sessions designed just for you!",
+      "buttonText": "Contact Now",
+      "animation": "a1"
+    },
+    {
+      "title": "Flexible Scheduling, Global Reach",
+      "description": "Learn at your own pace, on your schedule. Access tutors from around the world and enjoy seamless online sessions tailored to your goals.",
+      "buttonText": "Contact Now",
+      "animation": "a2"
+    },
+    {
+      "title": "Your Learning Journey Starts Here",
+      "description": "Whether you're learning a new language or mastering a subject, our expert tutors are here to guide you every step of the way.",
+      "buttonText": "Contact Now",
+      "animation": "a3"
+    }
+  ]
+  
