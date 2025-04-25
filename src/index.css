@@ -104,7 +104,7 @@ a.active {
 }
 
 .tsaCard {
-  background: linear-gradient(to left, #254336d4, #254336cf),
+  background: linear-gradient(to left, #042c1bd4, #052e1ccf),
     url("../src//assets/books-7838952_1280.jpg");
   background-position: center;
   background-repeat: no-repeat;

@@ -1,20 +1,27 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from "react";
 import StatCard from "./StatCard.jsx";
-import Marquee from "react-fast-marquee";
 import { Fade, Slide } from "react-awesome-reveal";
+import { BookOpen, Star, UserCheck, Users } from "lucide-react";
 
 const Stats = () => {
-  const [stats, setStats] = useState([]);
+  // const [stats, setStats] = useState([]);
 
-  useEffect(() => {
-    fetch("./stats.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setStats(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("./stats.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       // console.log(data);
+  //       setStats(data);
+  //     });
+  // }, []);
+  const stats = [
+    { label: "Experienced Tutors", count: "25,000+", IconKey: UserCheck },
+    { label: "5-star Reviews", count: "150,000+", IconKey: Star },
+    { label: "Languages/Subjects Taught", count: "100+", IconKey: BookOpen },
+    { label: "Registered Users", count: "50,000+", IconKey: Users }
+  ];
+  
   return (
     <div className="">
       <div className="md:w-3/5 ">

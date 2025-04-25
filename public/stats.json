@@ -1,18 +1,22 @@
 [
-    {
-      "label": "Experienced Tutors",
-      "count": "25000+"
-    },
-    {
-      "label": "5-star Reviews",
-      "count": "150000+"
-    },
-    {
-      "label": "Languages/Subjects Taught",
-      "count": "100+"
-    },
-    {
-      "label": "Registered Users",
-      "count": "50000+"
-    }
-  ]
+  {
+    "label": "Experienced Tutors",
+    "count": "25,000+",
+    "IconKey": "UserCheck"
+  },
+  {
+    "label": "5-star Reviews",
+    "count": "150,000+",
+    "IconKey": "Star"
+  },
+  {
+    "label": "Languages/Subjects Taught",
+    "count": "100+",
+    "IconKey": "BookOpen"
+  },
+  {
+    "label": "Registered Users",
+    "count": "50,000+",
+    "IconKey": "Users"
+  }
+]
