@@ -23,7 +23,7 @@ const TutorDetails = () => {
   }, [details, axiosSecure]);
   const { name, email, _id, review, price, language, description, photo } =
     tutor;
-  console.log(tutor);
+  // console.log(tutor);
   const handleTutorDetail = () => {
     // const reviews = Number(review);
     const tutorInfo = {
@@ -36,7 +36,7 @@ const TutorDetails = () => {
       loggedInUserEmail: user.email,
       review,
     };
-    console.log(tutorInfo);
+    // console.log(tutorInfo);
     Swal.fire({
       title: "Tutor Booked!",
       icon: "success",

@@ -19,7 +19,7 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
     loginUser(email, password)
       .then((res) => {
         setUser(res.user);
@@ -35,7 +35,7 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
         toast.success("Login Successfully");
         setUser(res.user);
         navigate(location?.state ? location.state : "/");

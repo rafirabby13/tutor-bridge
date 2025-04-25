@@ -30,7 +30,7 @@ const FindTutor = () => {
         `https://tutor-bridge-server.vercel.app/search?q=${search}`
       )
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setTutors(res.data);
         
         setLoading(false);

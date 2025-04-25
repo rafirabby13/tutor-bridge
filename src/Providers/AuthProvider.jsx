@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import {
@@ -58,7 +59,7 @@ const AuthProvider = ({ children }) => {
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("currentUser", currentUser?.email);
+      // console.log("currentUser", currentUser?.email);
       setUser(currentUser);
       if (currentUser?.email) {
         const user = { email: currentUser.email };
@@ -66,19 +67,19 @@ const AuthProvider = ({ children }) => {
         axios
           .post("https://tutor-bridge-server.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setLoading(false);
           });
       } else {
         axios
           .post("https://tutor-bridge-server.vercel.app/logout", {}, { withCredentials: true })
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setLoading(false);
           });
       }
     });
-    console.log("loading", loading);
+    // console.log("loading", loading);
 
     return () => {
       unsubscribe();

@@ -10,7 +10,7 @@ import Banner from "../components/Banner.jsx";
 const MainLayout = () => {
   const { theme, setTheme } = useContext(AuthContext);
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
   return (
     <div id={theme}>
       <section>

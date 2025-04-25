@@ -8,7 +8,7 @@ const LanguageCard = ({ lnguage }) => {
   // console.log(lnguage);
   const { teachers, title, img } = lnguage;
   const cat = title.split(' ')[0]
-  console.log(cat.toLowerCase());
+  // console.log(cat.toLowerCase());
   const category= cat.toLowerCase()
   return (
     <div>

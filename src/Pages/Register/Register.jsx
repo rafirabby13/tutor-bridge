@@ -19,11 +19,11 @@ const Register = () => {
     const name = form.name.value;
     const photo = form.photo.value;
     const password = form.password.value;
-    console.log(email, password, photo, name);
+    // console.log(email, password, photo, name);
 
     registerUser(email, password)
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
         setUser(res.user);
 
         updateProfile(auth.currentUser, {
@@ -31,7 +31,7 @@ const Register = () => {
           photoURL: photo,
         })
           .then(() => {
-            console.log("updated");
+            // console.log("updated");
             toast.success("Registered Successfully");
 
             navigate(location?.state ? location.state : "/");
@@ -48,7 +48,7 @@ const Register = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
         toast.success("Registered Successfully");
         setUser(res.user);
         navigate(location?.state ? location.state : "/");

@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const MyBookedCard = ({ booked }) => {
   const navigate = useNavigate();
-  console.log('booked', booked);
+  // console.log('booked', booked);
   const { booking, setBooking } = useContext(AuthContext);
   const {
     language,
@@ -24,12 +24,12 @@ const MyBookedCard = ({ booked }) => {
   } = booked;
   //   const [reviewCount, setReviewCount] = useState(parseInt(review) + 1);
   const handleReviewIncreament = () => {
-    console.log(typeof review);
+    // console.log(typeof review);
 
     axios
       .patch(`https://tutor-bridge-server.vercel.app/tutor/${tutorId}`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setBooking(false);
         Swal.fire({
           title: "Review Counted successfully!",

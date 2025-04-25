@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider.jsx";
 import { useLoaderData, useNavigate } from "react-router-dom";
@@ -41,7 +42,7 @@ const UpdateTutorial = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         Swal.fire({
           title: "Updated Successfully!",
           icon: "success",
