@@ -24,27 +24,30 @@ const FindTutorCategory = () => {
       });
   }, [category, setLoading]);
   return (
-    <div className="min-h-screen">
-      {loading ? (
-        <Loading />
-      ) : data.length > 0 ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data?.map((data, i) => (
-            <FindTutorCategoryCard key={i} data={data}></FindTutorCategoryCard>
-          ))}
-        </div>
-      ) : (
-        <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-[#3E5879] p-6 py-10 mx-auto my-20">
-          <h3 className="font-bold text-xl mb-2 text-[#F5EFE7]">
-            No Tutors Available
-          </h3>
-          <p className="text-[#F5EFE7] text-base mb-4">
-            We currently have no tutors available. Please check back later.
-          </p>
-          <Link to='/' className="btn bg-[#F5EFE7] text-[#3E5879]">Home</Link>
-        </div>
-      )}
-    </div>
+    <div className="min-h-screen ">
+    {loading ? (
+      <Loading />
+    ) : data.length > 0 ? (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+        {data?.map((data, i) => (
+          <FindTutorCategoryCard key={i} data={data}></FindTutorCategoryCard>
+        ))}
+      </div>
+    ) : (
+      <div className="max-w-sm rounded-lg overflow-hidden shadow-xl bg-[#254336] p-6 py-10 mx-auto my-20 text-center">
+        <h3 className="font-bold text-2xl mb-4 text-[#F5EFE7]">
+          No Tutors Available
+        </h3>
+        <p className="text-[#F5EFE7] text-base mb-6">
+          We currently have no tutors available. Please check back later.
+        </p>
+        <Link to="/" className="btn bg-[#F5EFE7] text-[#254336] px-8 py-3 rounded-md shadow-lg hover:bg-[#F5EFE7] hover:text-[#254336] transition">
+          Go Home
+        </Link>
+      </div>
+    )}
+  </div>
+  
   );
 };
 
