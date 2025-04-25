@@ -5,6 +5,7 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Moon, Sun } from "lucide-react";
 const Navbar = () => {
   const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
   // console.log(user);
@@ -172,10 +173,10 @@ const Navbar = () => {
             </div>
           )}
           <div
-            className="text-2xl text-[#E9EFEC] lg:text-6xl p-2"
+            className="text-2xl  lg:text-6xl  lg:btn ml-1 lg:btn-outline lg:btn-neutral lg:text-white"
             onClick={handleTheme}
           >
-            {theme !== "light" ? <FaToggleOn /> : <FaToggleOff />}
+            {theme !== "light" ? <Sun /> : <Moon  />}
           </div>
         </div>
       </div>

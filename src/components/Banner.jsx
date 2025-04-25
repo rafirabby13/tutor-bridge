@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 import BannerComponent from "./BannerComponent";
 const Banner = () => {
