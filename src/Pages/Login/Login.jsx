@@ -46,76 +46,139 @@ const Login = () => {
   };
 
   return (
-    <div className="hero feedback  overflow-x-hidden py-20">
-      <Helmet>
-        <title>Login | Tutor Bridge</title>
-      </Helmet>
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <Lottie
-            className="h-[200px] md:h-[600px]"
-            animationData={a1}
-            loop={true}
-          />
-        </div>
-        <div className="card form  w-full max-w-md shrink-0 shadow-2xl  shadow-[#331D2C]">
-          <form className="card-body" onSubmit={handleLogin}>
-            <h1 className="text-xl md:text-4xl font-bold text-center underline">
+    // <div className="hero feedback  overflow-x-hidden py-20">
+    //   <Helmet>
+    //     <title>Login | Tutor Bridge</title>
+    //   </Helmet>
+    //   <div className="hero-content flex-col lg:flex-row-reverse">
+    //     <div className="text-center lg:text-left">
+    //       <Lottie
+    //         className="h-[200px] md:h-[600px]"
+    //         animationData={a1}
+    //         loop={true}
+    //       />
+    //     </div>
+    //     <div className="card form  w-full max-w-md shrink-0 shadow-2xl  shadow-[#331D2C]">
+    //       <form className="card-body" onSubmit={handleLogin}>
+    //         <h1 className="text-xl md:text-4xl font-bold text-center underline">
+    //           Login
+    //         </h1>
+    //         <div className="form-control">
+    //           <label className="label">
+    //             <span className="label-text">Email</span>
+    //           </label>
+    //           <input
+    //             type="email"
+    //             placeholder="email"
+    //             className="input input-bordered "
+    //             name="email"
+    //             required
+    //           />
+    //         </div>
+    //         <div className="form-control">
+    //           <label className="label">
+    //             <span className="label-text">Password</span>
+    //           </label>
+    //           <input
+    //             type="password"
+    //             placeholder="password"
+    //             className="input input-bordered"
+    //             name="password"
+    //             required
+    //           />
+    //           <p className="md:text-2xl py-4">
+    //             Don't have an account?{" "}
+    //             <Link className="underline font-semibold" to="/register">
+    //               Register
+    //             </Link>
+    //           </p>
+    //         </div>
+    //         <div className="form-control mt-6 login">
+    //           <button className="p-2 md:p-4 bg-[#254336] text-white md:text-xl ">
+    //             Login
+    //           </button>
+    //         </div>
+    //       </form>
+    //       <div className="divider divider-[#254336]">OR</div>
+    //       <div onClick={handleGoogleLogin} className="form-control mt-6 login card form  w-full max-w-md shrink-0 shadow-2xl  shadow-[#331D2C]">
+    //         <button className="p-2 md:p-4 bg-[#254336] text-white md:text-xl ">
+    //           <FaGoogle /> Sign In With Google
+    //         </button>
+    //       </div>
+       
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="hero min-h-screen py-10 bg-gradient-to-br from-white to-gray-100 overflow-x-hidden">
+  <Helmet>
+    <title>Login | Tutor Bridge</title>
+  </Helmet>
+
+  <div className="hero-content flex-col lg:flex-row-reverse gap-10">
+    <div className="w-full lg:w-1/2">
+      <Lottie
+        className="h-[250px] md:h-[500px]"
+        animationData={a1}
+        loop={true}
+      />
+    </div>
+
+    <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl px-8 py-10">
+      <form onSubmit={handleLogin}>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">
+          Login
+        </h1>
+
+        <div className="space-y-4">
+          <div className="form-control">
+            <label className="label font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+
+          <div className="form-control">
+            <label className="label font-medium text-gray-700">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+
+          <div className="text-sm text-center mt-2 text-gray-600">
+            Don&apos;t have an account?{" "}
+            <Link to="/register" className="text-[#254336] font-semibold hover:underline">
+              Register
+            </Link>
+          </div>
+
+          <div className="pt-4">
+            <button className="w-full py-3 rounded-md bg-[#254336] hover:bg-[#1e362a] text-white font-semibold transition-all duration-300">
               Login
-            </h1>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered "
-                name="email"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                name="password"
-                required
-              />
-              <p className="md:text-2xl py-4">
-                Don't have an account?{" "}
-                <Link className="underline font-semibold" to="/register">
-                  Register
-                </Link>
-              </p>
-            </div>
-            <div className="form-control mt-6 login">
-              <button className="p-2 md:p-4 bg-[#254336] text-white md:text-xl ">
-                Login
-              </button>
-            </div>
-          </form>
-          <div className="divider divider-[#254336]">OR</div>
-          <div onClick={handleGoogleLogin} className="form-control mt-6 login">
-            <button className="p-2 md:p-4 px-10 bg-[#254336] text-white md:text-xl flex items-center justify-center gap-4 mb-10 w-fit mx-auto">
-              <FaGoogle /> Sign In With Google
             </button>
           </div>
-          {/* <div className="text-center w-full">
-            <button
-              className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#254336] shadow-red-400 shadow-sm text-white"
-              onClick={handleGoogleLogin}
-            >
-              Sign In With Google
-            </button>
-          </div> */}
         </div>
-      </div>
+      </form>
+
+      <div className="divider my-6 text-sm text-gray-500">OR</div>
+
+      <button
+        onClick={handleGoogleLogin}
+        className="flex items-center justify-center gap-2 w-full py-3 rounded-md bg-[#254336] hover:bg-[#1e362a] text-white font-semibold transition-all duration-300"
+      >
+        <FaGoogle className="text-lg" /> Sign In With Google
+      </button>
     </div>
+  </div>
+</div>
+
   );
 };
 
