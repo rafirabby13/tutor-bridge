@@ -12,12 +12,12 @@ const Footer = () => {
     <div className="foo mt-20">
       <footer className="foote py-5 md:py-10">
         <div className="text-center py-6 md:py-20 md:animate__animated animate__slideInDown animate__slower animate__infinite">
-          <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#DAD3BE]">
+          <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#dad3bed5]">
             TutorBridge
           </h1>
         </div>
 
-        <div className="flex md:flex-row gap-5 flex-col items-start text-[#ffffff] justify-between px-4 md:px-20">
+        <div className="flex md:flex-row gap-5 flex-col items-start text-[#ffffffbc] justify-between px-4 md:px-20">
           <div className="flex flex-col gap-2 text-sm md:text-xl">
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover" href="/services/language-tutors">Language Tutors</a>
@@ -41,8 +41,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="foote px-4 md:px-20 text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffe4] py-10">
-        <aside className="grid-flow-col items-center text-[#DAD3BE] text-sm md:text-2xl text-center md:text-start ">
+      <footer className="foote px-4 md:px-20 text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffb9] py-10">
+        <aside className="grid-flow-col items-center text-[#dad3be9e] text-sm md:text-2xl text-center md:text-start ">
           <p>
             &copy; {new Date().getFullYear()} TutorConnect Online Platform. All Rights Reserved.
             <br />
@@ -53,7 +53,7 @@ const Footer = () => {
             </h1>
           </p>
         </aside>
-        <nav className="md:place-self-center md:justify-self-end text-[#DAD3BE]">
+        <nav className="md:place-self-center md:justify-self-end text-[#dad3bedb]">
           <div className="grid grid-flow-col gap-4">
             
           <div className="text-xl md:text-5xl">
