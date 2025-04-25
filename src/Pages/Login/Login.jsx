@@ -46,69 +46,7 @@ const Login = () => {
   };
 
   return (
-    // <div className="hero feedback  overflow-x-hidden py-20">
-    //   <Helmet>
-    //     <title>Login | Tutor Bridge</title>
-    //   </Helmet>
-    //   <div className="hero-content flex-col lg:flex-row-reverse">
-    //     <div className="text-center lg:text-left">
-    //       <Lottie
-    //         className="h-[200px] md:h-[600px]"
-    //         animationData={a1}
-    //         loop={true}
-    //       />
-    //     </div>
-    //     <div className="card form  w-full max-w-md shrink-0 shadow-2xl  shadow-[#331D2C]">
-    //       <form className="card-body" onSubmit={handleLogin}>
-    //         <h1 className="text-xl md:text-4xl font-bold text-center underline">
-    //           Login
-    //         </h1>
-    //         <div className="form-control">
-    //           <label className="label">
-    //             <span className="label-text">Email</span>
-    //           </label>
-    //           <input
-    //             type="email"
-    //             placeholder="email"
-    //             className="input input-bordered "
-    //             name="email"
-    //             required
-    //           />
-    //         </div>
-    //         <div className="form-control">
-    //           <label className="label">
-    //             <span className="label-text">Password</span>
-    //           </label>
-    //           <input
-    //             type="password"
-    //             placeholder="password"
-    //             className="input input-bordered"
-    //             name="password"
-    //             required
-    //           />
-    //           <p className="md:text-2xl py-4">
-    //             Don't have an account?{" "}
-    //             <Link className="underline font-semibold" to="/register">
-    //               Register
-    //             </Link>
-    //           </p>
-    //         </div>
-    //         <div className="form-control mt-6 login">
-    //           <button className="p-2 md:p-4 bg-[#254336] text-white md:text-xl ">
-    //             Login
-    //           </button>
-    //         </div>
-    //       </form>
-    //       <div className="divider divider-[#254336]">OR</div>
-    //       <div onClick={handleGoogleLogin} className="form-control mt-6 login card form  w-full max-w-md shrink-0 shadow-2xl  shadow-[#331D2C]">
-    //         <button className="p-2 md:p-4 bg-[#254336] text-white md:text-xl ">
-    //           <FaGoogle /> Sign In With Google
-    //         </button>
-    //       </div>
-       
-    //     </div>
-    //   </div>
-    // </div>
+    
     <div className="hero min-h-screen py-10 bg-gradient-to-br from-white to-gray-100 overflow-x-hidden">
   <Helmet>
     <title>Login | Tutor Bridge</title>

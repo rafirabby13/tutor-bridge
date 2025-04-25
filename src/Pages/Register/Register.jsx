@@ -59,89 +59,89 @@ const Register = () => {
   };
 
   return (
-    <div className="hero feedback min-h-screen overflow-x-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-100">
       <Helmet>
         <title>Register | Tutor Bridge</title>
       </Helmet>
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-12 px-4 md:px-0">
+        {/* Animation */}
+        <div className="w-full lg:w-1/2 text-center">
           <Lottie
-            className="h-[200px] md:h-[600px]"
             animationData={a1}
-            loop={true}
+            loop
+            className="w-full max-w-md mx-auto h-[300px] md:h-[500px]"
           />
         </div>
-        <div className="card form w-full max-w-md shrink-0 shadow-2xl">
-          <form className="card-body" onSubmit={handleRegister}>
-            <h1 className="md:text-4xl font-bold text-center underline">
-              Register
-            </h1>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
+
+        {/* Form Card */}
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
+          <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Register</h1>
+          <form onSubmit={handleRegister} className="space-y-4">
+            <div>
+              <label className="block text-gray-700 mb-1">Name</label>
               <input
+                name="name"
                 type="text"
                 placeholder="Your Name"
-                className="input input-bordered"
-                name="name"
                 required
+                className="input input-bordered w-full"
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
+            <div>
+              <label className="block text-gray-700 mb-1">Email</label>
               <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
                 name="email"
+                type="email"
+                placeholder="you@example.com"
                 required
+                className="input input-bordered w-full"
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
+            <div>
+              <label className="block text-gray-700 mb-1">Password</label>
               <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
                 name="password"
+                type="password"
+                placeholder="••••••••"
                 required
+                className="input input-bordered w-full"
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Your Photo URL</span>
-              </label>
+            <div>
+              <label className="block text-gray-700 mb-1">Photo URL</label>
               <input
-                type="text"
-                placeholder="password"
-                className="input input-bordered"
                 name="photo"
+                type="url"
+                placeholder="https://example.com/photo.jpg"
                 required
+                className="input input-bordered w-full"
               />
             </div>
-            <p className="md:text-2xl py-4">
-              Already have an account?{" "}
-              <Link className="underline font-semibold" to="/login">
-                Login
-              </Link>
-            </p>
-            <div className="form-control mt-6 login">
-              <button className="p-2 md:p-4 bg-[#254336] text-white text-xl ">
-                Register
-              </button>
-            </div>
-          </form>
-          <div className="divider ">OR</div>
-          <div onClick={handleGoogleLogin} className="form-control mt-6 login">
-            <button className="p-2 md:p-4 px-10 bg-[#254336] text-white md:text-xl flex items-center justify-center gap-4 mb-10 w-fit mx-auto">
-              <FaGoogle /> Sign In With Google
+
+            <button
+              type="submit"
+              className="w-full py-3 bg-[#254336] text-white font-semibold rounded-lg hover:bg-[#1e362a] transition-colors"
+            >
+              Register
             </button>
+          </form>
+
+          <div className="mt-4 text-center text-gray-600">
+            Already have an account?{" "}
+            <Link to="/login" className="text-[#254336] hover:underline font-medium">
+              Login
+            </Link>
           </div>
+
+          <div className="divider my-6">OR</div>
+
+          <button
+            onClick={handleGoogleLogin}
+            className="w-full flex items-center justify-center gap-3 py-3  bg-white border border-gray-300 rounded-lg hover:bg-gray-200 transition"
+          >
+            <FaGoogle className="text-xl text-red-500" />
+            <span className="font-medium text-gray-700">Sign in with Google</span>
+          </button>
         </div>
       </div>
     </div>
