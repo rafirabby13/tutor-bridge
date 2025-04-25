@@ -14,7 +14,7 @@ const Error = () => {
               />
         </h1>
         <p className="text-xl mb-6">
-          Oops! The page you're looking for doesn't exist.
+          Oops! The page you're looking for doesn't exist.Search some valid path. 
         </p>
         <Link
           to="/"
